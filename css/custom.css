@@ -6,6 +6,19 @@
 /************************************************************/
 /* LAYOUT */
 
+.bg-light-grey {
+    background-color: var(--color-light-grey);
+}
+
+.bg-blue {
+    background: rgb(132,144,255);
+    background: linear-gradient(90deg, rgba(132,144,255,1) 0%, rgba(98,189,252,1) 100%);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
 /************************************************************/
 
 /************************************************************/
