@@ -25,23 +25,23 @@
 const brands = [
     {
         name: 'l1',
-        source: './img/l1.png'
+        source: 'l1.png'
     },
     {
         name: 'l2',
-        source: './img/l2.png'
+        source: 'l2.png'
     },
     {
         name: 'l3',
-        source: './img/l3.png'
+        source: 'l3.png'
     },
     {
         name: 'l4',
-        source: './img/l4.png'
+        source: 'l4.png'
     },
     {
         name: 'l5',
-        source: './img/l5.png'
+        source: 'l5.png'
     },
 ]
 

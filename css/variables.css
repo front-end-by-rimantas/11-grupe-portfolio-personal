@@ -2,5 +2,6 @@
     --color-light-grey: #f9f9ff;
     --color-blue-start: #8490ff;
     --color-blue-end: #62bdfc;
+    --color-gradient-blue: linear-gradient(90deg, rgba(132,144,255,1) 0%, rgba(98,189,252,1) 100%);
     --color-dark: #04091e;
 }
