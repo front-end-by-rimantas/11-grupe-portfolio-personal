@@ -1,0 +1,14 @@
+.brands {
+    display: inline-block;
+}
+
+    .brands img {
+        width: 150px;
+        padding: 0 20px;
+        margin-left: 60px;
+        opacity: 0.5;
+    }
+
+    .brands img:hover {
+        opacity: 1;
+    }
