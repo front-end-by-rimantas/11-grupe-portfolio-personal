@@ -20,7 +20,9 @@
 
 // testimonials
 
-// contact me
+// brands
+
+renderBrands (brands);
 
 // footer
 
