@@ -1,0 +1,20 @@
+.logo{
+    display:inline-block;
+    float: left;
+    height: 30px;
+}
+
+.top-menu{
+    display: inline-block;
+    float:right;
+}
+.top-menu>.menu-item{
+    display: inline-block;
+    margin-left: 10px;
+    background-color: red;
+}
+
+.menu-item a{
+    display: inline-block;
+    text-transform: uppercase;
+}
