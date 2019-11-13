@@ -46,6 +46,11 @@ p {
     color: #777;
 }
 
+.title {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .titleP {
     width: 60%;
     margin-left: 20%;
@@ -57,7 +62,6 @@ p {
 
 .left {
     display: inline-block;
-    width: 50%;
     float: left;
 }
 
