@@ -15,6 +15,16 @@
     margin: 0 calc(50% - 600px);
 }
 
+.col-2 {
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
 
 @media (max-width: 1300px) {
     .row {
