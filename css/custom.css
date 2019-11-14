@@ -55,6 +55,7 @@ p {
 
 .titleP {
     width: 60%;
+    margin-bottom: 80px;
 }
 
 .uppercase {
@@ -64,6 +65,7 @@ p {
 .left {
     display: inline-block;
     float: left;
+    width: 40%;
 }
 
 .right {
