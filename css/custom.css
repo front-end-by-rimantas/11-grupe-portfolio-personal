@@ -26,6 +26,61 @@
     color: var(--color-dark);
 }
 
+h2 {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+h3 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+p {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777;
+}
+
+.title {
+    text-align: center;
+}
+
+.titleP {
+    width: 60%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.left {
+    display: inline-block;
+    float: left;
+}
+
+.right {
+    display: inline-block;
+    float: right;
+    width: 40%;
+}
+
+    .right > h2 {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .right > p {
+        width: 100%;
+        text-align: left;
+    }
 
 /************************************************************/
 
