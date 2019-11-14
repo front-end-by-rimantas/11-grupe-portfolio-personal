@@ -1,7 +1,7 @@
 "use strict";
 
 // header
-
+renderFirstLevelMenu(menu);
 // hero
 
 // clients
