@@ -93,7 +93,68 @@ const menu = [
 
 // job history
 
-// services
+// projects
+
+const categories = [
+    {
+        id: 1,
+        name: 'Vector'
+    },
+    {
+        id: 2,
+        name: 'Raster'
+    },
+    {
+        id: 3,
+        name: 'UI/UX'
+    },
+    {
+        id: 4,
+        name: 'Printing'
+    },
+
+]
+
+const projects = [
+    {
+        id: 1,
+        title: '2D Vinyl Design',
+        image: 'p1.jpg',
+        category_id: 1
+    },
+    {
+        id: 3,
+        title: '3D Helmet Design',
+        image: 'p2.jpg',
+        category_id: 1
+    },
+    {
+        id: 4,
+        title: '2D Vinyl Design',
+        image: 'p3.jpg',
+        category_id: 2
+    },
+    {
+        id: 5,
+        title: '25D Vinyl Design',
+        image: 'p4.jpg',
+        category_id: 2
+    },
+    {
+        id: 6,
+        title: 'Creative Poster Design',
+        image: 'p5.jpg',
+        category_id: 3
+    },
+    {
+        id: 7,
+        title: 'Creative  Design',
+        image: 'p2.jpg',
+        category_id: 4
+    },
+]
+
+
 
 // testimonials
 
