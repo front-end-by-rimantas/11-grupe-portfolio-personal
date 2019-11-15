@@ -13,4 +13,4 @@ Site published at https://front-end-by-rimantas.github.io/11-grupe-portfolio-per
 Design: [Personal template](https://colorlib.com/preview/theme/personal/)
 
 ### Authors
-[Jaroslav Lomecki](https://github.com/jarosasan), [Domantas Bauža](https://github.com/orgs/front-end-by-rimantas/people/makeMHDB)
+[Jaroslav Lomecki](https://github.com/jarosasan), [Domantas Bauža](https://github.com/makeMHDB)
