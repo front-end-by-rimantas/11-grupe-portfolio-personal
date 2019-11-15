@@ -7,7 +7,7 @@
 .container-slim{
     display: inline-block;
     width: 100%;
-    padding: 20px 0;
+    padding: 0;
 }
 .row {
     display: inline-block;
@@ -15,14 +15,29 @@
     margin: 0 calc(50% - 600px);
 }
 
+.flex {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+    align-items: center;
+}
+
 .col-2 {
-    width: 50%;
-    float: left;
-    margin: 0;
+    grid-template-columns: 50% auto;
 }
 
 .mt-70 {
     margin-top: 70px;
+}
+
+.p-20 {
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -43,11 +58,19 @@
         width: 600px;
         margin: 0 calc(50% - 300px);
     }
+
+    .col-1 {
+        grid-template-columns: auto;
+    }
 }
 @media (max-width: 700px) {
     .row {
         width: 100%;
         margin: 0;
         padding: 0 20px;
+    }
+
+    .col-1 {
+        grid-template-columns: auto;
     }
 }
