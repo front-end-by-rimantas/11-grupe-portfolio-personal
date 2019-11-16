@@ -1,7 +1,7 @@
 "use strict";
 
 // header
-
+renderFirstLevelMenu(menu);
 // hero
 
 // clients
@@ -20,7 +20,9 @@
 
 // testimonials
 
-// contact me
+// brands
+
+renderBrands (brands);
 
 // footer
 
