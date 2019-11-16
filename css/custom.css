@@ -12,7 +12,7 @@
 }
 
 .bg-blue {
-    background: var(--color-gradient-blue);
+    background-color: var(--color-gradient-blue);
     color: var(--color-blue-anti);
 }
 
@@ -23,6 +23,17 @@
 
 .bg-light {
     background-color: #fff;
+    color: var(--color-dark);
+}
+
+h1 {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+    text-transform: uppercase;
     color: var(--color-dark);
 }
 
@@ -41,10 +52,20 @@ h3 {
     font-size: 14px;
 }
 
+h6 {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-dark);
+}
+
 p {
     display: inline-block;
     text-align: center;
     font-size: 14px;
+    line-height: 20px;
     font-weight: 300;
     color: #777;
 }
@@ -94,7 +115,9 @@ p {
 
 /************************************************************/
 /* HERO */
-
+.fullscreen {
+    height: 750px !important;
+}
 /************************************************************/
 
 /************************************************************/
