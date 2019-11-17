@@ -1,19 +1,14 @@
-.testimonials {
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
+.row#testimonials {
+    display: inline-flex;
+    justify-content: space-between;
 }
 
-    .testimonials > .left {
-        width: 49%;
-        background-color: white;
-    }
-
-    .testimonials > .right {
-        width: 49%;
-        background-color: white;
-    }
-
+.testimonials {
+    display: inline-flex;
+    width: 555px;
+    background-color: white;
+    cursor: pointer;
+}
     .testimonials .face-icon {
         display: inline-block;
         width: 30px;
@@ -30,11 +25,7 @@
         margin: 25px 0;
     }
 
-        .testimonials > .left:hover h4 {
-            color: var(--color-blue-start);
-        }
-
-        .testimonials > .right:hover h4 {
+        .testimonials:hover h4 {
             color: var(--color-blue-start);
         }
 

@@ -56,6 +56,32 @@ function renderFirstLevelMenu(data) {
 
 // testimonials
 
+function renderTestimonials ( data ) {
+    let HTML = '';
+
+    for( let i=0; i<data.length; i++) {
+
+        HTML += `<div class="testimonials">
+                    <div class="face-icon">
+                        <img src="./img/elements/${data[i].icon}" alt="User photo">
+                    </div>
+                    <div class="testimonial-message">
+                        <div class="testimonial-text">
+                            <p>${data[i].text}</p>
+                        </div>
+                        <div class="testimonial-name">
+                            <h4>${data[i].name}</h4>
+                        </div>
+                        <div class="testimonial-job">
+                            <p>${data[i].jobtitle}</p>
+                        </div>
+                    </div>
+                </div>`
+    }
+
+    return document.querySelector(".row#testimonials").innerHTML = HTML;
+}
+
 // brands
 
 function renderBrands ( data ) {

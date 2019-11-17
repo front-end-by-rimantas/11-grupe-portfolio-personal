@@ -20,6 +20,8 @@ renderFirstLevelMenu(menu);
 
 // testimonials
 
+renderTestimonials (testimonials);
+
 // brands
 
 renderBrands (brands);
