@@ -1,6 +1,12 @@
 .btn {
-
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--color-blue-anti);
+    background: var(--color-gradient-blue);
 }
     .btn:hover {
-        
+        box-shadow: 0 15px 25px -5px #949494;
     }
