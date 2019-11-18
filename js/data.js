@@ -99,12 +99,14 @@ const menu = [
 
 const testimonials = [
     {
+        id: '1',
         icon: 'user1.png',
         text: 'Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.',
         name: 'Harriet Maxwell',
         jobtitle: 'CEO at Google'
     },
     {
+        id: '2',
         icon: 'user2.png',
         text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
         name: 'Carolyn Craig',
@@ -116,22 +118,27 @@ const testimonials = [
 
 const brands = [
     {
+        id: '1',
         name: 'l1',
         source: 'l1.png'
     },
     {
+        id: '2',
         name: 'l2',
         source: 'l2.png'
     },
     {
+        id: '3',
         name: 'l3',
         source: 'l3.png'
     },
     {
+        id: '4',
         name: 'l4',
         source: 'l4.png'
     },
     {
+        id: '5',
         name: 'l5',
         source: 'l5.png'
     },
