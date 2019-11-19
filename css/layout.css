@@ -38,7 +38,7 @@
 }
 
 .col-3 {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .mt-70 {
@@ -71,7 +71,7 @@ a {
     }
 
     .col-md-2 {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media (max-width: 900px) {
@@ -85,7 +85,7 @@ a {
     }
 
     .col-md-2 {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media (max-width: 700px) {

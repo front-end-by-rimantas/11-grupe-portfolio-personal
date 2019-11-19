@@ -53,17 +53,29 @@
 }
 
 .filter-content{
-
 }
 
 .f-content{
-    /*padding:10px;*/
+    animation: isotope;
+    animation-duration: 0.2s;
 }
+
+@keyframes isotope {
+    0% {
+        width: 30%;
+        height: 30%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
 
 .f-content>.thumb{
     width: 100%;
     position: relative;
-
 }
 
 .thumb>img {
@@ -79,8 +91,8 @@
     left: 0;
     opacity: 0;
     border-radius: 10px;
-    background-color: var(--color-gradient-blue);
-    background-color: var(--color-gradient-blue-webkit);
+    background: var(--color-gradient-blue);
+    /*background-color: var(--color-gradient-blue-webkit);*/
 }
 
 .f-content > .thumb:hover .img-overlay {

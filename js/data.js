@@ -123,10 +123,16 @@ const projects = [
         category_id: 1
     },
     {
+        id: 2,
+        title: '3D Helmet Design',
+        image: 'p2.jpg',
+        category_id: 4
+    },
+    {
         id: 3,
         title: '3D Helmet Design',
         image: 'p2.jpg',
-        category_id: 1
+        category_id: 4
     },
     {
         id: 4,
@@ -146,12 +152,7 @@ const projects = [
         image: 'p5.jpg',
         category_id: 3
     },
-    {
-        id: 7,
-        title: 'Creative  Design',
-        image: 'p2.jpg',
-        category_id: 4
-    },
+
 ]
 
 
