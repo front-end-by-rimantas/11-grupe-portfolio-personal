@@ -1,0 +1,15 @@
+.h-left {
+    padding: 0 15px;
+    text-align: left;
+}
+
+.h-right {
+    padding: 0 15px;
+    display: flex;
+    align-self: flex-end;
+}
+
+.h-left > p {
+    text-align: left;
+    margin-bottom: 15px;
+}
