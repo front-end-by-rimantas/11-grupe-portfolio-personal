@@ -38,6 +38,10 @@ ul.addEventListener('click', (e) => {
 
 // testimonials
 
+renderTestimonials(testimonials);
+testimonialControl();
+setTimeout(autoFeedback, 5000);
+
 // brands
 
 renderBrands(brands);

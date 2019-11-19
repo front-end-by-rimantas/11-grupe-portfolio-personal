@@ -1,6 +1,6 @@
 :root {
     --color-light-grey: #f9f9ff;
-    --color-light-grey-anti: #777;
+    --color-light-grey-anti: black;
 
     --color-blue-start: #8490ff;
     --color-blue-end: #62bdfc;
@@ -10,5 +10,7 @@
     --color-blue-anti: #FFFFFF;
 
     --color-dark: #04091e;
+    --color-dark-anti: #777;
+
 
 }
