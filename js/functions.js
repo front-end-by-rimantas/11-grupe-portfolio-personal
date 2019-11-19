@@ -61,25 +61,75 @@ function renderTestimonials ( data ) {
 
     for( let i=0; i<data.length; i++) {
 
-        HTML += `<div class="testimonials">
-                    <div class="face-icon">
-                        <img src="./img/elements/${data[i].icon}" alt="User photo">
-                    </div>
-                    <div class="testimonial-message">
-                        <div class="testimonial-text">
-                            <p>${data[i].text}</p>
+            HTML += `<div class="testimonials">
+                        <div class="face-icon">
+                            <img src="./img/elements/${data[i].icon}" alt="User photo">
                         </div>
-                        <div class="testimonial-name">
-                            <h4>${data[i].name}</h4>
+                        <div class="testimonial-message">
+                            <div class="testimonial-text">
+                                <p>${data[i].text}</p>
+                            </div>
+                            <div class="testimonial-name">
+                                <h4>${data[i].name}</h4>
+                            </div>
+                            <div class="testimonial-job">
+                                <p>${data[i].jobtitle}</p>
+                            </div>
                         </div>
-                        <div class="testimonial-job">
-                            <p>${data[i].jobtitle}</p>
-                        </div>
-                    </div>
-                </div>`
+                    </div>`
     }
 
-    return document.querySelector(".row#testimonials").innerHTML = HTML;
+    return document.querySelector(".carousel > .slider").innerHTML = HTML;
+}
+
+let pause = 0;
+
+function testimonialControl () {
+
+    const carousel = document.querySelector('.carousel');
+    const slider = document.querySelector('.slider');
+    
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let direction;
+
+    next.addEventListener('click', function() {
+      direction = -1;
+      carousel.style.justifyContent = 'flex-start';
+      slider.style.transform = 'translate(-20%)';  
+    });
+    
+    prev.addEventListener('click', function() {
+      if (direction === -1) {
+        direction = 1;
+        slider.appendChild(slider.firstElementChild);
+      }
+      carousel.style.justifyContent = 'flex-end';    
+      slider.style.transform = 'translate(20%)';  
+      
+    });
+    
+    slider.addEventListener('transitionend', function() {  
+      if (direction === 1) {
+        slider.prepend(slider.lastElementChild);
+      } else {
+        slider.appendChild(slider.firstElementChild);
+      }
+      
+      slider.style.transition = 'none';
+      slider.style.transform = 'translate(0)';
+      setTimeout(() => {
+        slider.style.transition = 'all 0.5s';
+      })
+    }, false);
+}
+
+function autoFeedback () {
+
+    const slider = document.querySelector('.slider');
+    slider.style.transform = 'translate(-20%)';
+    
+    setTimeout(autoFeedback, 5000);
 }
 
 // brands
@@ -95,4 +145,3 @@ function renderBrands ( data ) {
 }
 
 // footer
-

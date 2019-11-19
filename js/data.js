@@ -99,18 +99,39 @@ const menu = [
 
 const testimonials = [
     {
-        id: '1',
+        id: 'feed1',
         icon: 'user1.png',
         text: 'Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.',
         name: 'Harriet Maxwell',
         jobtitle: 'CEO at Google'
     },
     {
-        id: '2',
+        id: 'feed2',
         icon: 'user2.png',
         text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
         name: 'Carolyn Craig',
         jobtitle: 'CEO at Facebook'
+    },
+    {
+        id: 'feed3',
+        icon: 'user2.png',
+        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        name: 'Petras Jonaitis',
+        jobtitle: 'Ukvedys at BIT'
+    },
+    {
+        id: 'feed3',
+        icon: 'user2.png',
+        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        name: 'Jonas Petraitis',
+        jobtitle: 'Gatviu slavejas at Vilniaus savivaldybe'
+    },
+    {
+        id: 'feed3',
+        icon: 'user2.png',
+        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        name: 'Giedrius Giedraitis',
+        jobtitle: 'Statybininkas'
     },
 ]
 

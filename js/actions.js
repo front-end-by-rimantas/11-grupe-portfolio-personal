@@ -20,7 +20,9 @@ renderFirstLevelMenu(menu);
 
 // testimonials
 
-renderTestimonials (testimonials);
+renderTestimonials(testimonials);
+testimonialControl();
+setTimeout(autoFeedback, 5000);
 
 // brands
 
