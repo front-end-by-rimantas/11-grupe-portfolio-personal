@@ -52,6 +52,12 @@ h3 {
     font-size: 14px;
 }
 
+h4 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 18px;
+}
+
 h6 {
     display: inline-block;
     font-size: 14px;
@@ -111,6 +117,7 @@ p {
 /* HEADER */
 .fixed {
     position: fixed;
+    z-index: 10;
 
 }
 /************************************************************/

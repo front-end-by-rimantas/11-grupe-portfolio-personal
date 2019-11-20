@@ -1,0 +1,132 @@
+.gallery{
+
+}
+
+.gallery>.filters{
+    margin: 80px auto;
+}
+
+.gallery ul{
+    list-style-type: none;
+}
+
+.gallery .filter-item{
+    font-size: 12px;
+    padding: 10px;
+    text-transform:uppercase;
+}
+.gallery .filter-item::after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    background: transparent;
+}
+
+.gallery .filter-item:hover::after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 6px;
+    background: var(--color-blue-start);
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.gallery .filter-item:hover{
+    color: var(--color-blue-start);
+}
+
+.filter-active{
+    color: var(--color-blue-start);
+}
+
+.gallery .filter-item.filter-active::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 100%;
+    background: var(--color-blue-start);
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.filter-content{
+}
+
+.f-content{
+    animation: isotope;
+    animation-duration: 0.2s;
+}
+
+@keyframes isotope {
+    0% {
+        width: 30%;
+        height: 30%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.f-content>.thumb{
+    width: 100%;
+    position: relative;
+}
+
+.thumb>img {
+    width: 100%;
+    opacity: 1;
+}
+
+.thumb > .img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 10px;
+    background: var(--color-gradient-blue);
+    /*background-color: var(--color-gradient-blue-webkit);*/
+}
+
+.f-content > .thumb:hover .img-overlay {
+    opacity: 0.80;
+    background: var(--color-gradient-blue);
+}
+
+.f-content > .thumb > .cont-link {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-weight: 200;
+    color: var(--color-blue-anti);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.f-content > .thumb:hover .cont-link {
+    display: block;
+}
+
+.f-content>.cont-description{
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.cont-description>h4{
+    width: 100%;
+}
+
+.cont-description > p {
+    width: 100%;
+}
