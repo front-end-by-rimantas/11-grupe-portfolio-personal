@@ -62,21 +62,22 @@ function renderNumbers (data){
 function counterDontWorry(data) {
     let counter = [0,0,0,0];
     let step = 100;
+    let increment = 0;
     const query = document.querySelectorAll('.numcounter'); 
-    
+
     let counterFunction = function() {
         for(let i=0; i<data.length; i++){
             query[i].textContent = counter[i];
+            increment = Math.round(data[i].number / step);
             if (counter[i] >= data[i].number){
                 counter[i] = data[i].number;
               clearInterval(this);
             } else {
-                counter[i] = counter[i] + step;
+                counter[i] += increment;
             }
           }
         }
     setInterval(counterFunction, 20);
-    counterFunction();
   }
 
 // skills
