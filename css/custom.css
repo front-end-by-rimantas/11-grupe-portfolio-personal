@@ -12,7 +12,7 @@
 }
 
 .bg-blue {
-    background-color: var(--color-gradient-blue);
+    background: var(--color-gradient-blue);
     color: var(--color-blue-anti);
 }
 
