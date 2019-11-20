@@ -59,32 +59,6 @@ function renderNumbers (data){
     return document.querySelector('.numbers').innerHTML = HTML;
 }
 
-
-function counter(data) {
-    const counter = document.querySelectorAll('.numcounter');
-    let duration = 2000;
-    let step = 100;
-    const sectionNumbers = document.querySelector('.numbers');
-
-    let count = function () {
-        if (window.scrollY + window.innerHeight > sectionNumbers.offsetTop) {
-            for (let i = 0; i < counter.length; i++) {
-                let grow = data[i].number > step ? Math.floor(data[i].number / step) : Math.floor(-data[i].number / step);
-                counter[i].textContent = `${data[i].counter}`;
-                data[i].counter += grow;
-
-                if (data[i].counter > data[i].number) {
-                    data[i].counter = data[i].number;
-                    clearInterval(this);
-                }
-            }
-        }
-    };
-
-    setInterval(count, duration / step);
-
-}
-
 // skills
 
 // latest work

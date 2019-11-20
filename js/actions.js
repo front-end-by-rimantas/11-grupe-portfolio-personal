@@ -12,8 +12,6 @@ renderFirstLevelMenu(menu);
 
 renderNumbers(numbers);
 
-counter(numbers);
-
 // skills
 
 // latest work
