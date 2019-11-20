@@ -11,8 +11,7 @@ renderFirstLevelMenu(menu);
 // numbers
 
 renderNumbers(numbers);
-
-counter(numbers);
+counterDontWorry(numbers);
 
 // skills
 

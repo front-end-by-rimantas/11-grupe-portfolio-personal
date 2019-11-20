@@ -59,31 +59,26 @@ function renderNumbers (data){
     return document.querySelector('.numbers').innerHTML = HTML;
 }
 
-
-function counter(data) {
-    const counter = document.querySelectorAll('.numcounter');
-    let duration = 2000;
+function counterDontWorry(data) {
+    let counter = [0,0,0,0];
     let step = 100;
-    const sectionNumbers = document.querySelector('.numbers');
+    let increment = 0;
+    const query = document.querySelectorAll('.numcounter'); 
 
-    let count = function () {
-        if (window.scrollY + window.innerHeight > sectionNumbers.offsetTop) {
-            for (let i = 0; i < counter.length; i++) {
-                let grow = data[i].number > step ? Math.floor(data[i].number / step) : Math.floor(-data[i].number / step);
-                counter[i].textContent = `${data[i].counter}`;
-                data[i].counter += grow;
-
-                if (data[i].counter > data[i].number) {
-                    data[i].counter = data[i].number;
-                    clearInterval(this);
-                }
+    let counterFunction = function() {
+        for(let i=0; i<data.length; i++){
+            query[i].textContent = counter[i];
+            increment = Math.round(data[i].number / step);
+            if (counter[i] >= data[i].number){
+                counter[i] = data[i].number;
+              clearInterval(this);
+            } else {
+                counter[i] += increment;
             }
+          }
         }
-    };
-
-    setInterval(count, duration / step);
-
-}
+    setInterval(counterFunction, 20);
+  }
 
 // skills
 
