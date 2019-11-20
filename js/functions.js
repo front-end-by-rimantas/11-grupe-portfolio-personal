@@ -46,6 +46,45 @@ function renderFirstLevelMenu(data) {
 
 // numbers
 
+function renderNumbers (data){
+    let HTML = '';
+
+    for(let i=0; i<data.length; i++) {
+        HTML += `<div class="numbers-col">
+                    <h2 class="numcounter">${data[i].number}</h2>
+                    <p>${data[i].name}</p>
+                </div>`
+    }
+
+    return document.querySelector('.numbers').innerHTML = HTML;
+}
+
+
+function counter(data) {
+    const counter = document.querySelectorAll('.numcounter');
+    let duration = 2000;
+    let step = 100;
+    const sectionNumbers = document.querySelector('.numbers');
+
+    let count = function () {
+        if (window.scrollY + window.innerHeight > sectionNumbers.offsetTop) {
+            for (let i = 0; i < counter.length; i++) {
+                let grow = data[i].number > step ? Math.floor(data[i].number / step) : Math.floor(-data[i].number / step);
+                counter[i].textContent = `${data[i].counter}`;
+                data[i].counter += grow;
+
+                if (data[i].counter > data[i].number) {
+                    data[i].counter = data[i].number;
+                    clearInterval(this);
+                }
+            }
+        }
+    };
+
+    setInterval(count, duration / step);
+
+}
+
 // skills
 
 // latest work
@@ -170,10 +209,12 @@ function testimonialControl () {
 }
 
 function autoFeedback () {
-
     const slider = document.querySelector('.slider');
+    let sectionTestimonials = document.querySelector('.carousel');
+
+    if (window.scrollY + window.innerHeight > sectionTestimonials.offsetTop) {
     slider.style.transform = 'translate(-20%)';
-    
+    }
     setTimeout(autoFeedback, 5000);
 }
 

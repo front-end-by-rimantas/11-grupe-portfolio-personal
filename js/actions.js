@@ -10,6 +10,10 @@ renderFirstLevelMenu(menu);
 
 // numbers
 
+renderNumbers(numbers);
+
+counter(numbers);
+
 // skills
 
 // latest work
