@@ -90,23 +90,19 @@ const menu = [
 const numbers = [
     {
         number: 2536,
-        name: 'Projects Completed',
-        counter: 0
+        name: 'Projects Completed'
     },
     {
         number: 6784,
-        name: 'Happy Clients',
-        counter: 0
+        name: 'Happy Clients'
     },
     {
         number: 2239,
-        name: 'Cups of Coffee',
-        counter: 0
+        name: 'Cups of Coffee'
     },
     {
         number: 434,
-        name: 'Real Professionals',
-        counter: 0
+        name: 'Real Professionals'
     },
 ]
 

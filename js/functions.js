@@ -59,6 +59,26 @@ function renderNumbers (data){
     return document.querySelector('.numbers').innerHTML = HTML;
 }
 
+function counterDontWorry(data) {
+    let counter = [0,0,0,0];
+    let step = 100;
+    const query = document.querySelectorAll('.numcounter'); 
+    
+    let counterFunction = function() {
+        for(let i=0; i<data.length; i++){
+            query[i].textContent = counter[i];
+            if (counter[i] >= data[i].number){
+                counter[i] = data[i].number;
+              clearInterval(this);
+            } else {
+                counter[i] = counter[i] + step;
+            }
+          }
+        }
+    setInterval(counterFunction, 20);
+    counterFunction();
+  }
+
 // skills
 
 // latest work
