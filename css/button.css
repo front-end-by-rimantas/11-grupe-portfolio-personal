@@ -10,3 +10,15 @@
     .btn:hover {
         box-shadow: 0 15px 25px -5px #949494;
     }
+
+.btn-white {
+    display: inline-block;
+    width: 100%;
+    padding: 20px auto;
+    font-size: 14px;
+    line-height: 36px;
+    text-transform: uppercase;
+    background-color: white;
+    text-align: center;
+    color: black;
+}

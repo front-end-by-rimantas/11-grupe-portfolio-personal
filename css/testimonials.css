@@ -1,0 +1,108 @@
+.carousel {
+    width: 100%;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.slider {
+    display: inline-flex;
+    height: 100%;
+    width: 250%;
+    flex-shrink: 0;
+    transition: all 0.5s;
+}
+
+.testimonials {
+    flex-basis: 20%;
+    display: inline-flex;
+    background-color: white;
+    cursor: pointer;
+    margin: 0 15px;
+}
+    .testimonials .face-icon {
+        display: inline-block;
+        width: 30px;
+        margin: 25px 30px 0;
+    }
+
+        .face-icon > img {
+            width: 30px;
+        }
+
+    .testimonial-message {
+        display: inline-block;
+        width: 75%;
+        margin: 25px 0;
+    }
+
+        .testimonials:hover h4 {
+            color: var(--color-blue-start);
+        }
+
+    .testimonial-text {
+        display: inline-block;
+        width: 100%;
+    }
+
+        .testimonial-text > p {            
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+    .testimonial-name {        
+        display: inline-block;
+        width: 100%;
+    }
+
+        .testimonial-name > h4 {
+            color: black;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+
+    .testimonial-job {
+        display: inline-block;
+        width: 100%;
+    }
+
+        .testimonial-job > p {
+            width: 100%;
+            text-align: left;
+        }
+
+
+.controls {
+    position: relative;
+    width: 40px;
+    bottom:130px;
+    left: 1140px;
+}
+.controls button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    margin-top: 2px;
+    
+    box-shadow: -10px 10px 30px -10px #888;
+}
+
+    .controls button:focus {
+        border: none;
+        outline: none;
+    }
+
+    .controls button:hover {
+        background-color: var(--color-blue-end);
+        color: var(--color-blue-anti);
+    }
+
+    .controls button:hover i{
+        color: var(--color-blue-anti);
+    }
+.controls button i {
+    font-size: 20px;
+    color: var(--color-dark-anti);
+    }
