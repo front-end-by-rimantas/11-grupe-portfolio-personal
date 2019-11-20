@@ -205,8 +205,8 @@ const plans = [
         title: 'Economy',
         description: 'For the individuals',
         feature1: 'Secure Online Transfer',
-        feature2: 'Secure Online Transfer',
-        feature3: 'Secure Online Transfer',
+        feature2: 'Unlimited Styles for interface',
+        feature3: 'Reliable Customer Service',
         price: '199.99'
     },
     {
@@ -214,8 +214,8 @@ const plans = [
         title: 'Business',
         description: 'For the individuals',
         feature1: 'Secure Online Transfer',
-        feature2: 'Secure Online Transfer',
-        feature3: 'Secure Online Transfer',
+        feature2: 'Unlimited Styles for interface\n',
+        feature3: 'Reliable Customer Service',
         price: '299.99'
     },
     {
@@ -223,8 +223,8 @@ const plans = [
         title: 'Premium',
         description: 'For the individuals',
         feature1: 'Secure Online Transfer',
-        feature2: 'Secure Online Transfer',
-        feature3: 'Secure Online Transfer',
+        feature2: 'Unlimited Styles for interface\n',
+        feature3: 'Reliable Customer Service',
         price: '399.99'
     },
     {
@@ -232,8 +232,8 @@ const plans = [
         title: 'Exclusive',
         description: 'For the individuals',
         feature1: 'Secure Online Transfer',
-        feature2: 'Secure Online Transfer',
-        feature3: 'Secure Online Transfer',
+        feature2: 'Unlimited Styles for interface\n',
+        feature3: 'Reliable Customer Service',
         price: '499.99'
     },
 

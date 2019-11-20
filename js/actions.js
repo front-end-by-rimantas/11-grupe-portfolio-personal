@@ -42,6 +42,10 @@ renderTestimonials(testimonials);
 testimonialControl();
 setTimeout(autoFeedback, 5000);
 
+//pricing
+
+renderPlans(plans);
+
 // brands
 
 renderBrands(brands);

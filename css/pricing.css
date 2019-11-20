@@ -1,8 +1,9 @@
 .price-item {
     text-align: center;
-    padding: 30px 15px;
+    padding: 40px 15px;
     background-color: var(--color-light-grey);
     transition: all 0.4s;
+    margin-bottom: 30px;
 }
 
 .price-item:hover {
