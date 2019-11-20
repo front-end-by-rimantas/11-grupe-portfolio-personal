@@ -87,6 +87,29 @@ const menu = [
 
 // numbers
 
+const numbers = [
+    {
+        number: 2536,
+        name: 'Projects Completed',
+        counter: 0
+    },
+    {
+        number: 6784,
+        name: 'Happy Clients',
+        counter: 0
+    },
+    {
+        number: 2239,
+        name: 'Cups of Coffee',
+        counter: 0
+    },
+    {
+        number: 434,
+        name: 'Real Professionals',
+        counter: 0
+    },
+]
+
 // skills
 
 // latest work
