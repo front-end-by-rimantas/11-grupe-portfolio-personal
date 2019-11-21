@@ -13,7 +13,9 @@ renderFirstLevelMenu(menu);
 renderNumbers(numbers);
 counterDontWorry(numbers);
 
-// skills
+// services
+
+renderServices(services);
 
 // latest work
 

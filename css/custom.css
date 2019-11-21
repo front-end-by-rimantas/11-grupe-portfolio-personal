@@ -54,7 +54,7 @@ h3 {
 
 h4 {
     display: inline-block;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 18px;
 }
 
@@ -82,7 +82,7 @@ p {
 
 .titleP {
     width: 60%;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 .uppercase {
