@@ -80,7 +80,21 @@ function counterDontWorry(data) {
     setInterval(counterFunction, 20);
   }
 
-// skills
+// services
+
+function renderServices (data) {
+    let HTML = '';
+
+    for (let i=0; i<data.length; i++) {
+        HTML += `<div class="services">
+                    <i class="${data[i].icon}"></i><br>
+                    <h4>${data[i].title}</h4>
+                    <p>${data[i].text}</p>
+                </div>`;
+    }
+
+    return document.querySelector('#services').innerHTML = HTML;
+}
 
 // latest work
 
