@@ -98,7 +98,27 @@ function renderServices (data) {
 
 // latest work
 
-// job history
+// blogs
+
+function renderBlogs (data) {
+    let HTML = '';
+
+    for (let i=0; i<data.length; i++) {
+        HTML += `<div class="blog">
+                    <div class="top">
+                        <div class="toptop">
+                            <div class="blogpic"><img src="./img/blog/${data[i].image}" alt="blog-pic"></div>
+                        </div>
+                            <img src="./img/${data[i].authorimage}" alt="user-pic" id="user">
+                    <p class="under-blog">${data[i].date}<i class="lnr lnr-heart"></i>${data[i].likes}<i class="lnr lnr-bubble"></i>${data[i].comments}</p>
+                    </div>
+                        <h4 class="uppercase">${data[i].title}</h4>
+                        <p>${data[i].text}</p>
+                </div>`
+    }
+
+    return document.querySelector('#blogs').innerHTML = HTML;
+}
 
 // projects
 function renderProjectFilters(data) {

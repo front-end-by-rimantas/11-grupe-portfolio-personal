@@ -19,7 +19,9 @@ renderServices(services);
 
 // latest work
 
-// job history
+// blogs
+
+renderBlogs(blogs);
 
 // projects
 
