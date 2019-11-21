@@ -1,0 +1,57 @@
+.blog {
+display: inline-block;
+cursor: pointer;
+}
+
+.top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.toptop {
+    overflow: hidden;
+}
+
+    .blogpic {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .top > img {
+    }
+
+        .top > img#user{
+            width: 30px;
+            height: 30px;
+            margin: 10px 0;
+        }
+
+    .top i {
+        vertical-align: middle;
+        margin: 0 5px 0 15px;
+    }
+
+.under-blog {
+    display: inline-block;
+    float: right;
+    margin: 10px 0;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+    .blog h4 {
+        width: 100%;
+        padding: 30px 0 15px;
+    }
+
+    .blog > p {
+        text-align: left;
+    }
+
+.blog:hover h4 {
+    color: var(--color-blue-start);
+    transition: all 0.3s;
+}
+
+.blog:hover .blogpic {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}

@@ -143,7 +143,37 @@ const services = [
 
 // latest work
 
-// job history
+// blogs
+
+const blogs = [
+    {
+        image: 'b1.jpg',
+        authorimage: 'user.png',
+        date: '13th Dec',
+        likes: '15',
+        comments: '04',
+        title: 'break through self doubt and fear',
+        text: 'Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.'
+    },
+    {
+        image: 'b2.jpg',
+        authorimage: 'user.png',
+        date: '13th Jan',
+        likes: '10',
+        comments: '15',
+        title: 'portable fashion for young women',
+        text: 'You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving.'
+    },
+    {
+        image: 'b3.jpg',
+        authorimage: 'user.png',
+        date: '13th Dec',
+        likes: '15',
+        comments: '04',
+        title: 'do dreams serve as a premonition',
+        text: 'So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.'
+    },
+]
 
 // projects
 
