@@ -10,19 +10,16 @@ cursor: pointer;
     overflow: hidden;
 }
 
-    .blogpic {
-        display: inline-block;
-        width: 100%;
-    }
+.blogpic {
+    display: inline-block;
+    width: 100%;
+}
 
-    .top > img {
+    .top > img#user{
+        width: 30px;
+        height: 30px;
+        margin: 10px 0;
     }
-
-        .top > img#user{
-            width: 30px;
-            height: 30px;
-            margin: 10px 0;
-        }
 
     .top i {
         vertical-align: middle;
