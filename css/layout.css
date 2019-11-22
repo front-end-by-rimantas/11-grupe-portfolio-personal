@@ -51,6 +51,9 @@
 .col-4 {
     grid-template-columns: auto auto auto auto;
 }
+.col-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 
 .footer-grid {
     grid-template-columns: 40% 40% 20%;

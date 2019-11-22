@@ -149,6 +149,7 @@ const blogs = [
     {
         image: 'b1.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Dec',
         likes: '15',
         comments: '04',
@@ -158,6 +159,7 @@ const blogs = [
     {
         image: 'b2.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Jan',
         likes: '10',
         comments: '15',
@@ -167,6 +169,7 @@ const blogs = [
     {
         image: 'b3.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Dec',
         likes: '15',
         comments: '04',
@@ -349,7 +352,7 @@ const brands = [
         id: '5',
         name: 'l5',
         source: 'l5.png'
-    },
+    }
 ];
 
 // footer

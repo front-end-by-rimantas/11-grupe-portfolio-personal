@@ -1,5 +1,4 @@
 .blog {
-display: inline-block;
 cursor: pointer;
 }
 
@@ -8,11 +7,12 @@ cursor: pointer;
 }
 .toptop {
     overflow: hidden;
+    text-align: center;
 }
 
 .blogpic {
-    display: inline-block;
-    width: 100%;
+    /*max-width: 100%;
+    height: auto;*/
 }
 
     .top > img#user{
@@ -26,8 +26,13 @@ cursor: pointer;
         margin: 0 5px 0 15px;
     }
 
+.blogauthor {
+    vertical-align: middle;
+    margin: 10px;
+    line-height: 30px;
+}
+
 .under-blog {
-    display: inline-block;
     float: right;
     margin: 10px 0;
     vertical-align: middle;

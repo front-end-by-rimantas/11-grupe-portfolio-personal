@@ -110,6 +110,7 @@ function renderBlogs (data) {
                             <div class="blogpic"><img src="./img/blog/${data[i].image}" alt="blog-pic"></div>
                         </div>
                             <img src="./img/${data[i].authorimage}" alt="user-pic" id="user">
+                            <p class="blogauthor">${data[i].authorname}</p>
                     <p class="under-blog">${data[i].date}<i class="lnr lnr-heart"></i>${data[i].likes}<i class="lnr lnr-bubble"></i>${data[i].comments}</p>
                     </div>
                         <h4 class="uppercase">${data[i].title}</h4>
@@ -194,8 +195,6 @@ function renderTestimonials ( data ) {
 
     return document.querySelector(".carousel > .slider").innerHTML = HTML;
 }
-
-let pause = 0;
 
 function testimonialControl () {
 
@@ -284,7 +283,7 @@ function renderBrands ( data ) {
         HTML += `<a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>`
     }
 
-    return document.querySelector(".brands").innerHTML = HTML;
+    return document.querySelector(".sliderBrands").innerHTML = HTML;
 }
 
 // footer
