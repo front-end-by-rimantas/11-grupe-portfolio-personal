@@ -32,12 +32,16 @@
     align-items: center;
 }
 
+.g-c {
+    display: grid;
+}
+
 .grid-gap {
     grid-gap: 30px;
 }
 
 .col-2 {
-    grid-template-columns: 50% auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 .col-3 {
@@ -83,6 +87,10 @@ a {
 
     .col-md-2 {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #aboutme {
+        justify-items: center;
     }
 
     /*.footer-grid-md-2{*/
