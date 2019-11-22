@@ -1,7 +1,7 @@
 "use strict";
 
 // header
-renderFirstLevelMenu(menu);
+renderTopMenu(menu);
 // hero
 
 // clients
@@ -36,9 +36,7 @@ ul.addEventListener('click', (e) => {
     category = target.getAttribute('filter-data')
     let data = getGalleryData(projects, category)
     renderGallery(data)
-
 })
-
 
 
 // testimonials

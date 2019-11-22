@@ -1,14 +1,38 @@
 "use strict";
 
 // header
-function renderMenuOneLevel(menuItems) {
-    const oneLevel = ''
+function renderSubLevelMenu(data) {
+    if (!Array.isArray(data)) {
+        console.error('ERROR: Data Type must by array')
+        return
+    }
+    if (data.length === 0) {
+        console.error("ERROR: Data array can't by empty")
+        return
+    }
 
+    let subMenu = ''
 
-    return oneLevel
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i]
+        let after = ''
+        let hasChild = ''
+        let sub = ''
+
+        if (item.children) {
+            after += `<span class="fa fa-angle-right"></span>`
+            sub += renderSubLevelMenu(item.children)
+        }
+        subMenu += `<li >
+                <a class=" ${hasChild}" href="${item.link}">${item.name}${after}</a>
+                ${sub}
+                </li>`
+    }
+
+    return `<ul class="sub-menu">${subMenu}</ul>`
 }
 
-function renderFirstLevelMenu(data) {
+function renderTopMenu(data) {
     let HTML = ''
 
     if (!Array.isArray(data)) {
@@ -25,19 +49,25 @@ function renderFirstLevelMenu(data) {
         let after = ''
         let active = ''
         let withChild = ''
+        let subMenu = ''
 
         if (i === 0) {
             active = 'menu-item-active'
         }
         if (item.children) {
             after += `<span class="fa fa-angle-down"></span>`
-            withChild += 'with-child'
+            withChild += 'has-child'
+            subMenu += renderSubLevelMenu(item.children)
         }
-        HTML += `<div class="menu-item"><a class="${active} ${withChild}" href="${item.link}">${item.name}${after}</a></div>`
+        HTML += `<div class="menu-item">
+                <a class="${active} ${withChild}" href="${item.link}">${item.name}${after}</a>
+                ${subMenu}
+                </div>`
     }
 
     return document.querySelector('#menu').innerHTML = HTML
 }
+
 // hero
 
 // clients
@@ -46,10 +76,10 @@ function renderFirstLevelMenu(data) {
 
 // numbers
 
-function renderNumbers (data){
+function renderNumbers(data) {
     let HTML = '';
 
-    for(let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         HTML += `<div class="numbers-col">
                     <h2 class="numcounter">${data[i].number}</h2>
                     <p>${data[i].name}</p>
@@ -60,32 +90,32 @@ function renderNumbers (data){
 }
 
 function counterDontWorry(data) {
-    let counter = [0,0,0,0];
+    let counter = [0, 0, 0, 0];
     let step = 100;
     let increment = 0;
-    const query = document.querySelectorAll('.numcounter'); 
+    const query = document.querySelectorAll('.numcounter');
 
-    let counterFunction = function() {
-        for(let i=0; i<data.length; i++){
+    let counterFunction = function () {
+        for (let i = 0; i < data.length; i++) {
             query[i].textContent = counter[i];
             increment = Math.round(data[i].number / step);
-            if (counter[i] >= data[i].number){
+            if (counter[i] >= data[i].number) {
                 counter[i] = data[i].number;
-              clearInterval(this);
+                clearInterval(this);
             } else {
                 counter[i] += increment;
             }
-          }
         }
+    }
     setInterval(counterFunction, 20);
-  }
+}
 
 // services
 
-function renderServices (data) {
+function renderServices(data) {
     let HTML = '';
 
-    for (let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         HTML += `<div class="services">
                     <i class="${data[i].icon}"></i><br>
                     <h4>${data[i].title}</h4>
@@ -98,7 +128,27 @@ function renderServices (data) {
 
 // latest work
 
-// job history
+// blogs
+
+function renderBlogs(data) {
+    let HTML = '';
+
+    for (let i = 0; i < data.length; i++) {
+        HTML += `<div class="blog">
+                    <div class="top">
+                        <div class="toptop">
+                            <div class="blogpic"><img src="./img/blog/${data[i].image}" alt="blog-pic"></div>
+                        </div>
+                            <img src="./img/${data[i].authorimage}" alt="user-pic" id="user">
+                    <p class="under-blog">${data[i].date}<i class="lnr lnr-heart"></i>${data[i].likes}<i class="lnr lnr-bubble"></i>${data[i].comments}</p>
+                    </div>
+                        <h4 class="uppercase">${data[i].title}</h4>
+                        <p>${data[i].text}</p>
+                </div>`
+    }
+
+    return document.querySelector('#blogs').innerHTML = HTML;
+}
 
 // projects
 function renderProjectFilters(data) {
@@ -146,15 +196,14 @@ function renderGallery(data) {
 }
 
 
-
 // testimonials
 
-function renderTestimonials ( data ) {
+function renderTestimonials(data) {
     let HTML = '';
 
-    for( let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
 
-            HTML += `<div class="testimonials">
+        HTML += `<div class="testimonials">
                         <div class="face-icon">
                             <img src="./img/elements/${data[i].icon}" alt="User photo">
                         </div>
@@ -177,52 +226,52 @@ function renderTestimonials ( data ) {
 
 let pause = 0;
 
-function testimonialControl () {
+function testimonialControl() {
 
     const carousel = document.querySelector('.carousel');
     const slider = document.querySelector('.slider');
-    
+
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
     let direction;
 
-    next.addEventListener('click', function() {
-      direction = -1;
-      carousel.style.justifyContent = 'flex-start';
-      slider.style.transform = 'translate(-20%)';  
+    next.addEventListener('click', function () {
+        direction = -1;
+        carousel.style.justifyContent = 'flex-start';
+        slider.style.transform = 'translate(-20%)';
     });
-    
-    prev.addEventListener('click', function() {
-      if (direction === -1) {
-        direction = 1;
-        slider.appendChild(slider.firstElementChild);
-      }
-      carousel.style.justifyContent = 'flex-end';    
-      slider.style.transform = 'translate(20%)';  
-      
+
+    prev.addEventListener('click', function () {
+        if (direction === -1) {
+            direction = 1;
+            slider.appendChild(slider.firstElementChild);
+        }
+        carousel.style.justifyContent = 'flex-end';
+        slider.style.transform = 'translate(20%)';
+
     });
-    
-    slider.addEventListener('transitionend', function() {  
-      if (direction === 1) {
-        slider.prepend(slider.lastElementChild);
-      } else {
-        slider.appendChild(slider.firstElementChild);
-      }
-      
-      slider.style.transition = 'none';
-      slider.style.transform = 'translate(0)';
-      setTimeout(() => {
-        slider.style.transition = 'all 0.5s';
-      })
+
+    slider.addEventListener('transitionend', function () {
+        if (direction === 1) {
+            slider.prepend(slider.lastElementChild);
+        } else {
+            slider.appendChild(slider.firstElementChild);
+        }
+
+        slider.style.transition = 'none';
+        slider.style.transform = 'translate(0)';
+        setTimeout(() => {
+            slider.style.transition = 'all 0.5s';
+        })
     }, false);
 }
 
-function autoFeedback () {
+function autoFeedback() {
     const slider = document.querySelector('.slider');
     let sectionTestimonials = document.querySelector('.carousel');
 
     if (window.scrollY + window.innerHeight > sectionTestimonials.offsetTop) {
-    slider.style.transform = 'translate(-20%)';
+        slider.style.transform = 'translate(-20%)';
     }
     setTimeout(autoFeedback, 5000);
 }
@@ -257,10 +306,10 @@ function renderPlans(data) {
 
 // brands
 
-function renderBrands ( data ) {
+function renderBrands(data) {
     let HTML = '';
 
-    for( let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         HTML += `<a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>`
     }
 
