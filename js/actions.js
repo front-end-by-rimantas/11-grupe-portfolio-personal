@@ -11,14 +11,17 @@ renderFirstLevelMenu(menu);
 // numbers
 
 renderNumbers(numbers);
+counterDontWorry(numbers);
 
-counter(numbers);
+// services
 
-// skills
+renderServices(services);
 
 // latest work
 
-// job history
+// blogs
+
+renderBlogs(blogs);
 
 // projects
 

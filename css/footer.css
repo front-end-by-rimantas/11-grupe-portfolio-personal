@@ -1,0 +1,48 @@
+.footer-grid {
+    align-items: start;
+}
+
+.footer-grid > div {
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+footer h4 {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    margin-bottom: 25px;
+}
+
+footer p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 14px;
+    color: var(--color-dark-anti);
+    text-align: left;
+}
+
+.footer-news-letter > form {
+    display: grid;
+    grid-template-columns: auto 50px;
+    height: 45px;
+}
+
+.footer-news-letter > form > input {
+    display: grid;
+    grid-template-columns: auto 45px;
+    height: 45px;
+    font-size: 16px;
+    padding-left: 15px;
+    outline-style: none;
+}
+
+footer .footer-social > .icons > a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-social > .icons > a:hover {
+    color: var(--color-blue-start);
+}

@@ -90,31 +90,90 @@ const menu = [
 const numbers = [
     {
         number: 2536,
-        name: 'Projects Completed',
-        counter: 0
+        name: 'Projects Completed'
     },
     {
         number: 6784,
-        name: 'Happy Clients',
-        counter: 0
+        name: 'Happy Clients'
     },
     {
         number: 2239,
-        name: 'Cups of Coffee',
-        counter: 0
+        name: 'Cups of Coffee'
     },
     {
         number: 434,
-        name: 'Real Professionals',
-        counter: 0
+        name: 'Real Professionals'
     },
 ]
 
-// skills
+// services
+
+const services = [
+    {
+        icon: 'lnr lnr-pie-chart',
+        title: 'Web Design',
+        text: '“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”'
+    },
+    {
+        icon: 'lnr lnr-laptop-phone',
+        title: 'Web Development',
+        text: 'If you are an entrepreneur, you know that your success cannot depend on the opinions of others. Like the wind, opinions.'
+    },
+    {
+        icon: 'lnr lnr-camera',
+        title: 'Photography',
+        text: 'Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills.'
+    },
+    {
+        icon: 'lnr lnr-picture',
+        title: 'Clipping Path',
+        text: 'Hypnosis quit smoking methods maintain caused quite a stir in the medical world over the last two decades. There is a lot of argument.'
+    },
+    {
+        icon: 'lnr lnr-tablet',
+        title: 'Apps Interface',
+        text: 'Do you sometimes have the feeling that you’re running into the same obstacles over and over again? Many of my conflicts.'
+    },
+    {
+        icon: 'lnr lnr-rocket',
+        title: 'Graphic Design',
+        text: 'You’ve heard the expression, “Just believe it and it will come.” Well, technically, that is true, however, ‘believing’ is not just thinking that.'
+    },
+]
 
 // latest work
 
-// job history
+// blogs
+
+const blogs = [
+    {
+        image: 'b1.jpg',
+        authorimage: 'user.png',
+        date: '13th Dec',
+        likes: '15',
+        comments: '04',
+        title: 'break through self doubt and fear',
+        text: 'Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.'
+    },
+    {
+        image: 'b2.jpg',
+        authorimage: 'user.png',
+        date: '13th Jan',
+        likes: '10',
+        comments: '15',
+        title: 'portable fashion for young women',
+        text: 'You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving.'
+    },
+    {
+        image: 'b3.jpg',
+        authorimage: 'user.png',
+        date: '13th Dec',
+        likes: '15',
+        comments: '04',
+        title: 'do dreams serve as a premonition',
+        text: 'So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.'
+    },
+]
 
 // projects
 
