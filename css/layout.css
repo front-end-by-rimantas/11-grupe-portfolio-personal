@@ -96,6 +96,10 @@ a {
         justify-items: center;
     }
 
+    .right > h2 {
+        font-size: 20px;
+    }
+
     /*.footer-grid-md-2{*/
     /*    grid-template-columns: 50% 50%;*/
     /*}*/
