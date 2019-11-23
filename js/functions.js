@@ -68,6 +68,14 @@ function renderTopMenu(data) {
     return document.querySelector('#menu').innerHTML = HTML
 }
 
+function headerShadow() {
+    if (window.scrollY > 80) {
+        document.querySelector('#header').classList.add('header-shadow')
+    } else {
+        document.querySelector('#header').classList.remove('header-shadow')
+    }
+}
+
 // hero
 
 // clients

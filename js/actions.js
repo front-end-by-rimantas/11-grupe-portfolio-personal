@@ -2,6 +2,7 @@
 
 // header
 renderTopMenu(menu);
+window.addEventListener('scroll', headerShadow)
 // hero
 
 // clients
