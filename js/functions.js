@@ -291,15 +291,7 @@ function renderBrands ( data ) {
     return document.querySelector(".brands").innerHTML = HTML;
 }
 
-function autoBrands () {
-    const brands = document.querySelector('.brands');
-
-        brands.appendChild(brands.firstElementChild);
-
-        setTimeout(autoBrands, 2000);
-}
-
-/*function autoBrandsNew () {
+function autoBrandsNew () {
     const soloBrand = document.querySelector('.soloBrand');
     const allBrands = document.querySelector('.brands');
     let firstBrandClone = soloBrand.cloneNode(true);
@@ -310,17 +302,38 @@ function autoBrands () {
 function autoBrandsNext() {
     const brands = document.querySelector('.brands');
 
-    brands.style.transform += 'translate(-20%)';
+    brands.style.transform = 'translate(-20%)';
 }
 
 function autoBrandsDelete() {
     const brands = document.querySelector('.brands');
 
     brands.removeChild(brands.childNodes[0]);
-    brands.removeChild(brands.childNodes[1]);
-    brands.removeChild(brands.childNodes[2]);
-    brands.removeChild(brands.childNodes[3]);
-    brands.removeChild(brands.childNodes[4]);
-}*/
+    brands.style.transition = 'none';
+    brands.style.transform = 'translate(0)';
+    setTimeout(() => {
+        brands.style.transition = 'all 0.5s';
+      })
+}
+
+function brandsAnimation() {
+    const soloBrand = document.querySelector('.soloBrand');
+    const allBrands = document.querySelector('.brands');
+
+    // Padarom pirmo vaiko klona ir nukeliam ji i gala
+    let firstBrandClone = soloBrand.cloneNode(true);
+    allBrands.appendChild(firstBrandClone);
+
+    // Paslenkam brandus i sona
+    autoBrandsNext();
+
+    // Istrinam pirma vaika, kuris nuejo i sona ir pakeiciam antra vaika pirmu, kai pasislinkimas baigtas
+
+    allBrands.addEventListener('transitionend', autoBrandsDelete);
+
+    // Kartojam funkcija per nauja
+
+    setTimeout(brandsAnimation, 2000);
+}
 
 // footer

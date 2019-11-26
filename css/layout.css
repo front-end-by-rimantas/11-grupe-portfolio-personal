@@ -27,6 +27,10 @@
     justify-content: center;
 }
 
+.sb {
+    justify-content: space-between;
+}
+
 .grid-container {
     display: grid;
     align-items: center;
@@ -61,6 +65,10 @@
 
 .footer-grid {
     grid-template-columns: 40% 40% 20%;
+}
+
+.ov-h {
+    overflow: hidden;
 }
 
 .mt-70 {

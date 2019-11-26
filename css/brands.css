@@ -1,7 +1,13 @@
-
+.brands {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    transition: all 0.5s;
+    /*overflow: hidden;*/
+}
 .soloBrand {
-    text-align: center;
-    overflow: hidden;
+    flex-shrink: 0;
+    width: 20%;
 }
 
     .soloBrand img {
@@ -11,3 +17,15 @@
     .soloBrand img:hover {
         opacity: 1;
     }
+
+@media (max-width: 1040px) {
+    .soloBrand {
+        width: 35%;
+    }
+}
+
+@media (max-width: 640px) {
+    .soloBrand {
+        width: 50%;
+    }
+}
