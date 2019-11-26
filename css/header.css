@@ -76,11 +76,19 @@
     visibility: visible;
 }
 
-.sub-menu > ul {
-    display: block;
-    width: 100%;
-    list-style: none;
+.top-menu > .menu-item > ul.sub-menu > li > ul.sub-menu {
+    position: absolute;
+    display: none;
+    right: 0;
+    visibility: hidden;
+    transition: all 5s;
 }
+
+.top-menu > .menu-item > ul.sub-menu > li:hover > ul.sub-menu {
+    display: block;
+    visibility: visible;
+}
+
 
 .sub-menu li {
     position: relative;

@@ -10,27 +10,27 @@ const menu = [
     {
         id: 2,
         name: 'About',
-        link: '#'
+        link: '#about'
     },
     {
         id: 3,
         name: 'Services',
-        link: '#'
+        link: '#service'
     },
     {
         id: 4,
         name: 'Portfolio',
-        link: '#'
+        link: '#portfolio'
     },
     {
         id: 5,
         name: 'Pricing',
-        link: '#'
+        link: '#plans'
     },
     {
         id: 6,
         name: 'Blog',
-        link: '#',
+        link: '#blog',
         children: [
             {
                 id: 11,
