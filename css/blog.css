@@ -1,5 +1,7 @@
 .blog {
 cursor: pointer;
+height: 100%;
+padding: 0 15px;
 }
 
 .top {
@@ -10,9 +12,8 @@ cursor: pointer;
     text-align: center;
 }
 
-.blogpic {
-    /*max-width: 100%;
-    height: auto;*/
+.blogpic > img {
+    width: 100%;
 }
 
     .top > img#user{
@@ -56,4 +57,16 @@ cursor: pointer;
 .blog:hover .blogpic {
     transform: scale(1.1);
     transition: all 0.3s;
+}
+
+@media (max-width: 1040px) {
+    .under-blog {
+        float: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog > p {
+        margin-bottom: 50px;
+    }
 }

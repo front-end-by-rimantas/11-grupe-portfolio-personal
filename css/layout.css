@@ -92,6 +92,10 @@ a {
         grid-template-columns: 1fr 1fr;
     }
 
+    .col-md-3 {
+        grid-template-columns: auto auto auto;
+    }
+
     #aboutme {
         justify-items: center;
     }

@@ -286,4 +286,25 @@ function renderBrands ( data ) {
     return document.querySelector(".sliderBrands").innerHTML = HTML;
 }
 
+/*function autoBrands () {
+    const brands = document.querySelector('.sliderBrands');
+
+      if (window.scrollY + window.innerHeight > brands.offsetTop) {
+        brands.style.transform = 'translate(-20%)';
+        brands.appendChild(brands.firstElementChild);
+        }
+
+        brands.addEventListener('transitionend', function () {
+            //brands.appendChild(brands.firstElementChild);
+                brands.style.transition = 'none';
+                brands.style.transform = 'translate(0)';
+            setTimeout(() => {
+                brands.style.transition = 'all 0.5s';
+          })
+        }, false);
+
+        setTimeout(autoBrands, 2000);
+
+}*/
+
 // footer
