@@ -64,19 +64,22 @@ function counterDontWorry(data) {
     let step = 100;
     let increment = 0;
     const query = document.querySelectorAll('.numcounter'); 
+    const numbersSection = document.querySelector('.numbers');
 
     let counterFunction = function() {
-        for(let i=0; i<data.length; i++){
-            query[i].textContent = counter[i];
-            increment = Math.round(data[i].number / step);
-            if (counter[i] >= data[i].number){
-                counter[i] = data[i].number;
-              clearInterval(this);
-            } else {
-                counter[i] += increment;
+        if (window.scrollY + window.innerHeight > numbersSection.offsetTop){
+            for(let i=0; i<data.length; i++){
+                query[i].textContent = counter[i];
+                increment = Math.round(data[i].number / step);
+                if (counter[i] >= data[i].number){
+                    counter[i] = data[i].number;
+                clearInterval(this);
+                } else {
+                    counter[i] += increment;
+                }
             }
-          }
         }
+    }
     setInterval(counterFunction, 20);
   }
 
