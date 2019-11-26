@@ -37,7 +37,7 @@
 
 @media (max-width: 640px) {
     .brands {
-        min-width: 80%;
+        width: 80%;
         justify-content: center;
     }
 }
