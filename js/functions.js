@@ -51,7 +51,7 @@ function renderMenu(data) {
         let withChild = ''
         let subMenu = ''
 
-        if (i === 0) {
+        if (data[i].id === 1) {
             active = 'menu-item-active'
         }
         if (item.children) {
@@ -86,7 +86,7 @@ function renderMobile(data) {
         let withChild = ''
         let subMenu = ''
 
-        if (i === 0) {
+        if (data[i].id === 1) {
             active = 'menu-item-active'
         }
         if (item.children) {

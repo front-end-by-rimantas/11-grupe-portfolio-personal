@@ -146,7 +146,7 @@
     }
 
     .m-container {
-        display: grid;
+        display: none;
         grid-template-columns: 300px auto;
         position: fixed;
         top: 0;

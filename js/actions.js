@@ -3,6 +3,26 @@
 // header
 renderHeadMenu(menu);
 renderMobileMenu(menu);
+const hamburger = document.querySelector('.hamburger')
+const overlay = document.querySelector('.overlay')
+const mContainer = document.querySelector('.m-container')
+console.log(hamburger.childNodes)
+hamburger.addEventListener('click', () => {
+    const child = hamburger.childNodes[0]
+    child.classList.toggle('lnr-menu')
+    child.classList.toggle('lnr-cross')
+    console.log(mContainer.style.display)
+    mContainer.style.display = mContainer.style.display === 'grid' ? 'none' : 'grid'
+})
+
+overlay.addEventListener('click', () => {
+    const child = hamburger.childNodes[0]
+    child.classList.toggle('lnr-menu')
+    child.classList.toggle('lnr-cross')
+    console.log(mContainer.style.display)
+    mContainer.style.display = mContainer.style.display === 'none' ? 'grid' : 'none'
+})
+
 const menuItemToggle = document.querySelectorAll('.menu-item > span')
 const child = document.querySelectorAll('.has-child > ul > .show')
 child.forEach((e) => {
@@ -22,8 +42,6 @@ menuItemToggle.forEach((i) => {
             e.classList.toggle('show')
         })
     })
-
-
 })
 
 
