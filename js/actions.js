@@ -6,22 +6,48 @@ renderMobileMenu(menu);
 const hamburger = document.querySelector('.hamburger')
 const overlay = document.querySelector('.overlay')
 const mContainer = document.querySelector('.m-container')
-console.log(hamburger.childNodes)
+let nera = true
+let neraPosition = 0
 hamburger.addEventListener('click', () => {
     const child = hamburger.childNodes[0]
     child.classList.toggle('lnr-menu')
     child.classList.toggle('lnr-cross')
-    console.log(mContainer.style.display)
     mContainer.style.display = mContainer.style.display === 'grid' ? 'none' : 'grid'
+    nera = false
+    neraPosition = window.scrollY
 })
 
 overlay.addEventListener('click', () => {
     const child = hamburger.childNodes[0]
     child.classList.toggle('lnr-menu')
     child.classList.toggle('lnr-cross')
-    console.log(mContainer.style.display)
     mContainer.style.display = mContainer.style.display === 'none' ? 'grid' : 'none'
+    nera = true
 })
+
+
+window.addEventListener('scroll', (e) => {
+    if (nera === false) {
+        window.scrollTo({
+            top: neraPosition,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+})
+
+
+document.addEventListener('click', (e) => {
+    let item = e.target
+    console.log(item)
+    let a = document.querySelector('.menu-item-active').classList.remove('menu-item-active')
+    console.log(a)
+    item.classList.add('menu-item-active')
+    console.log(document.querySelector('.menu-item-active'))
+})
+
+
+
 
 const menuItemToggle = document.querySelectorAll('.menu-item > span')
 const child = document.querySelectorAll('.has-child > ul > .show')

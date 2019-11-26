@@ -188,7 +188,7 @@
         color: var(--color-blue-anti);
     }
 
-    .menu-item > a.menu-item-active {
+    .menu-item-active {
         color: var(--color-blue-start);
     }
 
