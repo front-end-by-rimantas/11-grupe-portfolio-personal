@@ -32,7 +32,7 @@ function renderSubLevelMenu(data) {
     return `<ul class="sub-menu">${subMenu}</ul>`
 }
 
-function renderTopMenu(data) {
+function renderMenu(data) {
     let HTML = ''
 
     if (!Array.isArray(data)) {
@@ -64,9 +64,53 @@ function renderTopMenu(data) {
                 ${subMenu}
                 </div>`
     }
-
-    return document.querySelector('#menu').innerHTML = HTML
+    return HTML
 }
+
+function renderMobile(data) {
+    let HTML = ''
+
+    if (!Array.isArray(data)) {
+        console.error('ERROR: Data Type must by array')
+        return
+    }
+    if (data.length === 0) {
+        console.error("ERROR: Data array can't by empty")
+        return
+    }
+
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i]
+        let after = ''
+        let active = ''
+        let withChild = ''
+        let subMenu = ''
+
+        if (i === 0) {
+            active = 'menu-item-active'
+        }
+        if (item.children) {
+            after += `<span class="fa fa-angle-down"></span>`
+            withChild += 'has-child'
+            subMenu += renderMobile(item.children)
+        }
+        HTML += `<li class="menu-item ${withChild} show">
+                <a class="${active}" href="${item.link}">${item.name}</a>
+                ${after}
+                ${subMenu}
+                </li>`
+    }
+    return `<ul>${HTML}</ul>`
+}
+
+function renderHeadMenu(data) {
+    return document.querySelector('.top-menu').innerHTML = renderMenu(data)
+}
+
+function renderMobileMenu(data) {
+    return document.querySelector('.m-menu').innerHTML = renderMobile(data)
+}
+
 
 function headerShadow() {
     if (window.scrollY > 80) {

@@ -119,14 +119,14 @@ p {
 .fixed {
     position: fixed;
     z-index: 10;
-    transition: all 0.5s;
-
+    transition: all 0.8s;
 }
 
 .header-shadow {
     transition: all 0.5s;
     box-shadow: 0 20px 20px 0px rgba(158, 158, 158, 0.2);
 }
+
 /************************************************************/
 
 /************************************************************/

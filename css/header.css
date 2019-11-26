@@ -4,6 +4,17 @@
     height: 30px;
 }
 
+.hamburger {
+    display: none;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.m-container {
+    display: none;
+}
+
 .top-menu{
     display: inline-block;
     float:right;
@@ -23,7 +34,6 @@
     line-height: 20px;
     padding: 5px 10px;
     color: var(--color-dark);
-
 }
 
 .menu-item > a > span {
@@ -53,20 +63,17 @@
     padding: 10px;
 }
 
-.menu-item > ul.sub-menu {
-    /*display: none;*/
+.top-menu > .menu-item > ul.sub-menu {
     position: absolute;
     margin-top: 20px;
     right: 0;
     visibility: hidden;
-    /*opacity: 0;*/
-    transition: visibility 0.1s;
+    transition: visibility 0.2s;
 }
 
-.menu-item:hover > ul.sub-menu {
+.top-menu > .menu-item:hover > ul.sub-menu {
     display: block;
     visibility: visible;
-    /*opacity: 1;*/
 }
 
 .sub-menu > ul {
@@ -114,5 +121,92 @@
 .menu-item > ul > li:hover .sub-menu {
     display: block;
 }
+
+@media (max-width: 1040px) {
+    .top-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+        float: right;
+    }
+
+    .cross {
+        display: inline-block;
+        float: right;
+    }
+
+    .m-container {
+        display: grid;
+        grid-template-columns: 300px auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+    }
+
+    .m-container > .m-menu {
+        display: block;
+        background: black;
+        opacity: 0.97;
+        padding-top: 20px;
+    }
+
+    .m-container > .m-menu .menu-item {
+        display: none;
+        line-height: 30px;
+        font-size: 30px;
+        color: white;
+        position: relative;
+    }
+
+    .m-container > .m-menu .show {
+        display: block;
+        padding-left: 20px;
+    }
+
+    .m-container > .m-menu .hide {
+        display: none;
+    }
+
+    .menu-item > a {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 10px 15px;
+        color: var(--color-blue-anti);
+    }
+
+    .menu-item > a.menu-item-active {
+        color: var(--color-blue-start);
+    }
+
+    .menu-item a:hover {
+        color: var(--color-blue-start);
+    }
+
+    .menu-item > span {
+        position: absolute;
+        display: inline-block;
+        font-weight: 200;
+        padding: 10px;
+        font-size: 20px;
+        line-height: 20px;
+        right: 0;
+        cursor: pointer;
+    }
+
+
+    .m-container > .overlay {
+        background: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+    }
+
+
+}
+
 
 
