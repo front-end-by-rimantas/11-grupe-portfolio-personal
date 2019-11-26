@@ -32,6 +32,10 @@
     align-items: center;
 }
 
+.grid-container-inline {
+    display: inline-grid;
+}
+
 .g-c {
     display: grid;
 }

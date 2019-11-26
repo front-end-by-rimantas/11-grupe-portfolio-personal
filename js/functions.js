@@ -283,31 +283,44 @@ function renderBrands ( data ) {
     let HTML = '';
 
     for( let i=0; i<data.length; i++) {
-        HTML += `<a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>`
+        HTML += `<div class="soloBrand">
+                    <a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>
+                </div>`;
     }
 
-    return document.querySelector(".sliderBrands").innerHTML = HTML;
+    return document.querySelector(".brands").innerHTML = HTML;
 }
 
-/*function autoBrands () {
-    const brands = document.querySelector('.sliderBrands');
+function autoBrands () {
+    const brands = document.querySelector('.brands');
 
-      if (window.scrollY + window.innerHeight > brands.offsetTop) {
-        brands.style.transform = 'translate(-20%)';
         brands.appendChild(brands.firstElementChild);
-        }
-
-        brands.addEventListener('transitionend', function () {
-            //brands.appendChild(brands.firstElementChild);
-                brands.style.transition = 'none';
-                brands.style.transform = 'translate(0)';
-            setTimeout(() => {
-                brands.style.transition = 'all 0.5s';
-          })
-        }, false);
 
         setTimeout(autoBrands, 2000);
+}
 
+/*function autoBrandsNew () {
+    const soloBrand = document.querySelector('.soloBrand');
+    const allBrands = document.querySelector('.brands');
+    let firstBrandClone = soloBrand.cloneNode(true);
+
+    allBrands.appendChild(firstBrandClone);
+}
+
+function autoBrandsNext() {
+    const brands = document.querySelector('.brands');
+
+    brands.style.transform += 'translate(-20%)';
+}
+
+function autoBrandsDelete() {
+    const brands = document.querySelector('.brands');
+
+    brands.removeChild(brands.childNodes[0]);
+    brands.removeChild(brands.childNodes[1]);
+    brands.removeChild(brands.childNodes[2]);
+    brands.removeChild(brands.childNodes[3]);
+    brands.removeChild(brands.childNodes[4]);
 }*/
 
 // footer

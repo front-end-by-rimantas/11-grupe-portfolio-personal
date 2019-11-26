@@ -1,0 +1,13 @@
+
+.soloBrand {
+    text-align: center;
+    overflow: hidden;
+}
+
+    .soloBrand img {
+        opacity: 0.5;
+    }
+
+    .soloBrand img:hover {
+        opacity: 1;
+    }
