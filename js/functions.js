@@ -291,14 +291,6 @@ function renderBrands ( data ) {
     return document.querySelector(".brands").innerHTML = HTML;
 }
 
-function autoBrandsNew () {
-    const soloBrand = document.querySelector('.soloBrand');
-    const allBrands = document.querySelector('.brands');
-    let firstBrandClone = soloBrand.cloneNode(true);
-
-    allBrands.appendChild(firstBrandClone);
-}
-
 function autoBrandsNext() {
     const brands = document.querySelector('.brands');
     let w = window.innerWidth;
