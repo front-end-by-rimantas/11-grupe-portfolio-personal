@@ -10,27 +10,27 @@ const menu = [
     {
         id: 2,
         name: 'About',
-        link: '#'
+        link: '#about'
     },
     {
         id: 3,
         name: 'Services',
-        link: '#'
+        link: '#service'
     },
     {
         id: 4,
         name: 'Portfolio',
-        link: '#'
+        link: '#portfolio'
     },
     {
         id: 5,
         name: 'Pricing',
-        link: '#'
+        link: '#plans'
     },
     {
         id: 6,
         name: 'Blog',
-        link: '#',
+        link: '#blog',
         children: [
             {
                 id: 11,
@@ -149,6 +149,7 @@ const blogs = [
     {
         image: 'b1.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Dec',
         likes: '15',
         comments: '04',
@@ -158,6 +159,7 @@ const blogs = [
     {
         image: 'b2.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Jan',
         likes: '10',
         comments: '15',
@@ -167,6 +169,7 @@ const blogs = [
     {
         image: 'b3.jpg',
         authorimage: 'user.png',
+        authorname: 'Mark Wiens',
         date: '13th Dec',
         likes: '15',
         comments: '04',
@@ -236,7 +239,6 @@ const projects = [
     },
 
 ]
-
 
 
 // testimonials
@@ -349,7 +351,7 @@ const brands = [
         id: '5',
         name: 'l5',
         source: 'l5.png'
-    },
+    }
 ];
 
 // footer

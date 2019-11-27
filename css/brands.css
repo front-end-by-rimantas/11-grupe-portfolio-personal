@@ -1,0 +1,31 @@
+.brands {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s;
+}
+.soloBrand {
+    flex-shrink: 0;
+    width: 20%;
+    height: 100%;
+}
+
+    .soloBrand img {
+        opacity: 0.5;
+    }
+
+    .soloBrand img:hover {
+        opacity: 1;
+    }
+
+@media (max-width: 1040px) {
+    .soloBrand {
+        width: 35%;
+    }
+}
+
+@media (max-width: 640px) {
+    .soloBrand {
+        width: 70%;
+    }
+}

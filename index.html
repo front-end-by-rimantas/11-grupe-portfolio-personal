@@ -13,11 +13,16 @@
 </head>
 <body>
 <!-- header start -->
-<div class="container-slim bg-light fixed p-20">
+<div id="header" class="container-slim bg-light fixed p-20">
     <div class="row ">
         <div class="logo"><img src="./img/logo.png" alt="Personal"></div>
-        <div class="top-menu" id="menu">
+        <div class="top-menu"></div>
+        <div class="hamburger"><i class="lnr lnr-menu"></i></div>
+    </div>
+    <div class="m-container">
+        <div class="m-menu">
         </div>
+        <div class="overlay"></div>
     </div>
 </div>
 <!-- header end -->
@@ -41,10 +46,10 @@
 <!-- hero end -->
 
 <!-- about me start -->
-<div class="container">
-    <div class="row">
+<div id="about" class="container">
+    <div class="row g-c grid-gap col-2 col-md-1">
         <div class="left">
-            <img src="./img/about-img.png" alt="About me">
+            <img src="./img/about-img.png" alt="#">
         </div>
         <div class="right">
             <h3 class="uppercase">About me</h3>
@@ -57,24 +62,25 @@
         </div>
     </div>
 </div>
+
 <!-- about me end -->
 
-    <!-- services start -->
-    <div class="container">
-        <div class="row">
-            <div class="title">
-                <h2>My Offered Services</h2>
-                <p class="titleP" style="padding-bottom:0;">At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected.</p>
-            </div>
+<!-- services start -->
+<div id="service" class="container">
+    <div class="row">
+        <div class="title">
+            <h2>My Offered Services</h2>
+            <p class="titleP" style="padding-bottom:0;">At about this time of year, some months after New Year’s
+                resolutions have been made and kept, or made and neglected.</p>
         </div>
-        <div class="row">
-            <div class="grid-container grid-gap col-xs-1 col-md-2 col-3" id="services">
-                <!-- <div class="services">
-                        <i class="lnr lnr-mustache"></i><br>
-                        <h4>Web design</h4>
-                        <p>“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”</p>
-                </div> -->
-            </div>
+    </div>
+    <div class="row">
+        <div class="grid-container grid-gap col-xs-1 col-md-2 col-3" id="services">
+            <!-- <div class="services">
+                    <i class="lnr lnr-mustache"></i><br>
+                    <h4>Web design</h4>
+                    <p>“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”</p>
+            </div> -->
         </div>
     </div>
 </div>
@@ -94,7 +100,7 @@
 <!-- numbers end -->
 
 <!-- projects start -->
-<div class="container">
+<div id="portfolio" class="container">
     <div class="row">
         <div class="title">
             <h2>Our Latest Featured Projects</h2>
@@ -124,7 +130,7 @@
 
 <!-- testimonials start -->
 <div class="container bg-light-grey">
-    <div class="row">
+    <div class="row ov-h">
         <div class="title">
             <h2>Client’s Feedback About Me</h2>
             <p class="titleP">It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker
@@ -153,15 +159,15 @@
             </div>
         </div>
         <div class="controls">
-            <button class="next"><i class="fa fa-arrow-up"></i></button>
-            <button class="prev"><i class="fa fa-arrow-down"></i></button>
+            <button class="next"><i class="lnr lnr-arrow-up"></i></button>
+            <button class="prev"><i class="lnr lnr-arrow-down"></i></button>
         </div>
     </div>
 </div>
 <!-- testimonials end -->
 
 <!-- Pricing start -->
-<div class="container">
+<div id="plans" class="container">
     <div class="row">
         <div class="title">
             <h2>Choose Your Plan</h2>
@@ -192,7 +198,7 @@
 <!-- Pricing end -->
 
 <!-- blog start -->
-<div class="container bg-light-grey">
+<div id="blog" class="container bg-light-grey">
     <div class="row">
         <div class="title">
             <h2>Latest Posts From Our Blog</h2>
@@ -201,7 +207,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="grid-container grid-gap col-xs-1 col-md-2 col-3" id="blogs">
+        <div class="grid-container col-3 col-xs-1" id="blogs">
             <!-- <div class="blog">
                 <div class="top">
                     <div class="toptop">
@@ -220,10 +226,15 @@
 
 <!-- brands start -->
 <div class="container bg-blue">
-    <div class="row brands">
-        <!-- <a href="#"><img src="./img/l1.png" alt="####"></a> -->
+    <div class="row ov-h">
+        <div class="brands">
+            <!-- <div class="soloBrand">
+                <a href="#"><img src="./img//brands/l1.png" alt="###"></a>
+            </div> -->
+        </div>
     </div>
 </div>
+
 <!-- brands end -->
 
 <!-- footer start -->
