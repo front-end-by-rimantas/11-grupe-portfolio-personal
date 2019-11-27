@@ -301,8 +301,19 @@ function autoBrandsNew () {
 
 function autoBrandsNext() {
     const brands = document.querySelector('.brands');
-
-    brands.style.transform = 'translate(-20%)';
+    let w = window.innerWidth;
+    let translate = 0;
+    
+    if(w > 1040) {
+        translate = 20;
+    }
+    if(w < 1040) {
+        translate = 35;
+    }
+    if(w < 640) {
+        translate = 70;
+    }
+    brands.style.transform = 'translate(-'+translate+'%)';
 }
 
 function autoBrandsDelete() {
