@@ -1,8 +1,18 @@
 .brands {
-    display: inline-block;
+    display: inline-flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sliderBrands {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
 }
 
     .brands img {
+        flex-basis: 20%;
         padding: 0 20px;
         margin-left: 60px;
         opacity: 0.5;
@@ -11,3 +21,23 @@
     .brands img:hover {
         opacity: 1;
     }
+
+
+@media (max-width: 1040px) {
+    .brands {
+        width: 95%;
+    }
+}
+
+@media (max-width: 840px) {
+    .brands {
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .brands {
+        width: 80%;
+        justify-content: center;
+    }
+}

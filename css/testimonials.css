@@ -103,6 +103,26 @@
         color: var(--color-blue-anti);
     }
 .controls button i {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-dark-anti);
     }
+
+
+@media (max-width: 1240px) {
+    .controls {
+        width: 84px;
+        left: calc( (100% - 80px) / 2);
+        bottom: 0;
+        margin-top: 10px;
+    }
+
+    .controls button {
+        display: inline;
+    }
+}
+
+@media (max-width: 840px) {
+    .slider {
+        width: 500%;
+    }
+}

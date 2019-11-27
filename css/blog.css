@@ -1,6 +1,7 @@
 .blog {
-display: inline-block;
 cursor: pointer;
+height: 100%;
+padding: 0 15px;
 }
 
 .top {
@@ -8,10 +9,10 @@ cursor: pointer;
 }
 .toptop {
     overflow: hidden;
+    text-align: center;
 }
 
-.blogpic {
-    display: inline-block;
+.blogpic > img {
     width: 100%;
 }
 
@@ -26,8 +27,13 @@ cursor: pointer;
         margin: 0 5px 0 15px;
     }
 
+.blogauthor {
+    vertical-align: middle;
+    margin: 10px;
+    line-height: 30px;
+}
+
 .under-blog {
-    display: inline-block;
     float: right;
     margin: 10px 0;
     vertical-align: middle;
@@ -51,4 +57,16 @@ cursor: pointer;
 .blog:hover .blogpic {
     transform: scale(1.1);
     transition: all 0.3s;
+}
+
+@media (max-width: 1040px) {
+    .under-blog {
+        float: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog > p {
+        margin-bottom: 50px;
+    }
 }

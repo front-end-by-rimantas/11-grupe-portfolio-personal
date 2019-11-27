@@ -64,19 +64,22 @@ function counterDontWorry(data) {
     let step = 100;
     let increment = 0;
     const query = document.querySelectorAll('.numcounter'); 
+    const numbersSection = document.querySelector('.numbers');
 
     let counterFunction = function() {
-        for(let i=0; i<data.length; i++){
-            query[i].textContent = counter[i];
-            increment = Math.round(data[i].number / step);
-            if (counter[i] >= data[i].number){
-                counter[i] = data[i].number;
-              clearInterval(this);
-            } else {
-                counter[i] += increment;
+        if (window.scrollY + window.innerHeight > numbersSection.offsetTop){
+            for(let i=0; i<data.length; i++){
+                query[i].textContent = counter[i];
+                increment = Math.round(data[i].number / step);
+                if (counter[i] >= data[i].number){
+                    counter[i] = data[i].number;
+                clearInterval(this);
+                } else {
+                    counter[i] += increment;
+                }
             }
-          }
         }
+    }
     setInterval(counterFunction, 20);
   }
 
@@ -110,6 +113,7 @@ function renderBlogs (data) {
                             <div class="blogpic"><img src="./img/blog/${data[i].image}" alt="blog-pic"></div>
                         </div>
                             <img src="./img/${data[i].authorimage}" alt="user-pic" id="user">
+                            <p class="blogauthor">${data[i].authorname}</p>
                     <p class="under-blog">${data[i].date}<i class="lnr lnr-heart"></i>${data[i].likes}<i class="lnr lnr-bubble"></i>${data[i].comments}</p>
                     </div>
                         <h4 class="uppercase">${data[i].title}</h4>
@@ -195,8 +199,6 @@ function renderTestimonials ( data ) {
     return document.querySelector(".carousel > .slider").innerHTML = HTML;
 }
 
-let pause = 0;
-
 function testimonialControl () {
 
     const carousel = document.querySelector('.carousel');
@@ -281,10 +283,57 @@ function renderBrands ( data ) {
     let HTML = '';
 
     for( let i=0; i<data.length; i++) {
-        HTML += `<a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>`
+        HTML += `<div class="soloBrand">
+                    <a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>
+                </div>`;
     }
 
     return document.querySelector(".brands").innerHTML = HTML;
+}
+
+function autoBrandsNew () {
+    const soloBrand = document.querySelector('.soloBrand');
+    const allBrands = document.querySelector('.brands');
+    let firstBrandClone = soloBrand.cloneNode(true);
+
+    allBrands.appendChild(firstBrandClone);
+}
+
+function autoBrandsNext() {
+    const brands = document.querySelector('.brands');
+
+    brands.style.transform = 'translate(-20%)';
+}
+
+function autoBrandsDelete() {
+    const brands = document.querySelector('.brands');
+
+    brands.removeChild(brands.childNodes[0]);
+    brands.style.transition = 'none';
+    brands.style.transform = 'translate(0)';
+    setTimeout(() => {
+        brands.style.transition = 'all 0.5s';
+      })
+}
+
+function brandsAnimation() {
+    const soloBrand = document.querySelector('.soloBrand');
+    const allBrands = document.querySelector('.brands');
+
+    // Padarom pirmo vaiko klona ir nukeliam ji i gala
+    let firstBrandClone = soloBrand.cloneNode(true);
+    allBrands.appendChild(firstBrandClone);
+
+    // Paslenkam brandus i sona
+    autoBrandsNext();
+
+    // Istrinam pirma vaika, kuris nuejo i sona ir pakeiciam antra vaika pirmu, kai pasislinkimas baigtas
+
+    allBrands.addEventListener('transitionend', autoBrandsDelete);
+
+    // Kartojam funkcija per nauja
+
+    setTimeout(brandsAnimation, 2000);
 }
 
 // footer

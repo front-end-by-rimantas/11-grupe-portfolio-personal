@@ -56,6 +56,7 @@ renderPlans(plans);
 // brands
 
 renderBrands(brands);
+setTimeout(brandsAnimation, 2000);
 
 // footer
 
