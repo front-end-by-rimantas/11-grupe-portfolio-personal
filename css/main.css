@@ -5,7 +5,7 @@
 @import './button.css';
 @import './block.css';
 @import './hero.css';
-@import './client-brands.css';
+@import './brands.css';
 @import './footer.css';
 @import './form.css';
 @import './gallery.css';
@@ -14,3 +14,4 @@
 @import './header.css';
 @import './progress-bar.css';
 @import './testimonials.css';
+@import './blog.css';

@@ -1,0 +1,72 @@
+.blog {
+cursor: pointer;
+height: 100%;
+padding: 0 15px;
+}
+
+.top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.toptop {
+    overflow: hidden;
+    text-align: center;
+}
+
+.blogpic > img {
+    width: 100%;
+}
+
+    .top > img#user{
+        width: 30px;
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    .top i {
+        vertical-align: middle;
+        margin: 0 5px 0 15px;
+    }
+
+.blogauthor {
+    vertical-align: middle;
+    margin: 10px;
+    line-height: 30px;
+}
+
+.under-blog {
+    float: right;
+    margin: 10px 0;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+    .blog h4 {
+        width: 100%;
+        padding: 30px 0 15px;
+    }
+
+    .blog > p {
+        text-align: left;
+    }
+
+.blog:hover h4 {
+    color: var(--color-blue-start);
+    transition: all 0.3s;
+}
+
+.blog:hover .blogpic {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+@media (max-width: 1040px) {
+    .under-blog {
+        float: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog > p {
+        margin-bottom: 50px;
+    }
+}

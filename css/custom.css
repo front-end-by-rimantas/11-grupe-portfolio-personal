@@ -90,27 +90,18 @@ p {
 }
 
 .left {
-    display: inline-block;
-    float: left;
-    width: 40%;
+    width: 100%;
+    padding: 0 15px;
 }
 
 .right {
-    display: inline-block;
-    float: right;
-    width: 40%;
+    width: 90%;
     margin-top: 40px;
+    padding: 0 15px;
     text-align: left;
 }
 
-    .right > h2 {
-        margin-bottom: 0;
-    }
 
-    .right > p {
-        width: 100%;
-        margin-bottom: 30px;
-    }
 
 /************************************************************/
 
@@ -143,8 +134,26 @@ p {
 
 /************************************************************/
 /* ABOUT ME */
+#aboutme {
+    justify-items: center;
+}
 .left > img {
-    width: 540px;
+    width: 100%;
+}
+
+.right > h3 {
+    width: 50%;
+}
+.right > h2 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.right > p {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    left: -15px;
 }
 /************************************************************/
 
@@ -172,6 +181,18 @@ p {
         position: relative;
         bottom: 20px;
     }
+
+@media (max-width: 840px) {
+    .numbers-col {
+        width: 50%
+    }
+}
+
+@media (max-width: 640px) {
+    .numbers-col {
+        width: 100%;
+    }
+}
 
 /************************************************************/
 
