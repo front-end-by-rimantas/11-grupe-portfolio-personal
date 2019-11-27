@@ -108,6 +108,10 @@ a {
         grid-template-columns: auto auto auto;
     }
 
+    .md-pt {
+        padding-top: 120px;
+    }
+
     #aboutme {
         justify-items: center;
     }
