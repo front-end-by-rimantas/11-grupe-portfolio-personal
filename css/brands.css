@@ -1,13 +1,13 @@
 .brands {
-    display: inline-flex;
-    width: 100%;
+    display: flex;
     justify-content: space-between;
+    width: 100%;
     transition: all 0.5s;
-    /*overflow: hidden;*/
 }
 .soloBrand {
     flex-shrink: 0;
     width: 20%;
+    height: 100%;
 }
 
     .soloBrand img {
@@ -26,6 +26,6 @@
 
 @media (max-width: 640px) {
     .soloBrand {
-        width: 50%;
+        width: 70%;
     }
 }
