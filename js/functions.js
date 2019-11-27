@@ -1,14 +1,38 @@
 "use strict";
 
 // header
-function renderMenuOneLevel(menuItems) {
-    const oneLevel = ''
+function renderSubLevelMenu(data) {
+    if (!Array.isArray(data)) {
+        console.error('ERROR: Data Type must by array')
+        return
+    }
+    if (data.length === 0) {
+        console.error("ERROR: Data array can't by empty")
+        return
+    }
 
+    let subMenu = ''
 
-    return oneLevel
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i]
+        let after = ''
+        let hasChild = ''
+        let sub = ''
+
+        if (item.children) {
+            after += `<span class="fa fa-angle-right"></span>`
+            sub += renderSubLevelMenu(item.children)
+        }
+        subMenu += `<li >
+                <a class=" ${hasChild}" href="${item.link}">${item.name}${after}</a>
+                ${sub}
+                </li>`
+    }
+
+    return `<ul class="sub-menu">${subMenu}</ul>`
 }
 
-function renderFirstLevelMenu(data) {
+function renderMenu(data) {
     let HTML = ''
 
     if (!Array.isArray(data)) {
@@ -25,19 +49,77 @@ function renderFirstLevelMenu(data) {
         let after = ''
         let active = ''
         let withChild = ''
+        let subMenu = ''
 
-        if (i === 0) {
+        if (data[i].id === 1) {
             active = 'menu-item-active'
         }
         if (item.children) {
             after += `<span class="fa fa-angle-down"></span>`
-            withChild += 'with-child'
+            withChild += 'has-child'
+            subMenu += renderSubLevelMenu(item.children)
         }
-        HTML += `<div class="menu-item"><a class="${active} ${withChild}" href="${item.link}">${item.name}${after}</a></div>`
+        HTML += `<div class="menu-item">
+                <a class="${active} ${withChild}" href="${item.link}">${item.name}${after}</a>
+                ${subMenu}
+                </div>`
+    }
+    return HTML
+}
+
+function renderMobile(data) {
+    let HTML = ''
+
+    if (!Array.isArray(data)) {
+        console.error('ERROR: Data Type must by array')
+        return
+    }
+    if (data.length === 0) {
+        console.error("ERROR: Data array can't by empty")
+        return
     }
 
-    return document.querySelector('#menu').innerHTML = HTML
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i]
+        let after = ''
+        let active = ''
+        let withChild = ''
+        let subMenu = ''
+
+        if (data[i].id === 1) {
+            active = 'menu-item-active'
+        }
+        if (item.children) {
+            after += `<span class="fa fa-angle-down"></span>`
+            withChild += 'has-child'
+            subMenu += renderMobile(item.children)
+        }
+        HTML += `<li class="menu-item ${withChild} show">
+                <a class="${active}" href="${item.link}">${item.name}</a>
+                ${after}
+                ${subMenu}
+                </li>`
+    }
+    return `<ul>${HTML}</ul>`
 }
+
+function renderHeadMenu(data) {
+    return document.querySelector('.top-menu').innerHTML = renderMenu(data)
+}
+
+function renderMobileMenu(data) {
+    return document.querySelector('.m-menu').innerHTML = renderMobile(data)
+}
+
+
+function headerShadow() {
+    if (window.scrollY > 80) {
+        document.querySelector('#header').classList.add('header-shadow')
+    } else {
+        document.querySelector('#header').classList.remove('header-shadow')
+    }
+}
+
 // hero
 
 // clients
@@ -46,10 +128,10 @@ function renderFirstLevelMenu(data) {
 
 // numbers
 
-function renderNumbers (data){
+function renderNumbers(data) {
     let HTML = '';
 
-    for(let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         HTML += `<div class="numbers-col">
                     <h2 class="numcounter">${data[i].number}</h2>
                     <p>${data[i].name}</p>
@@ -60,7 +142,7 @@ function renderNumbers (data){
 }
 
 function counterDontWorry(data) {
-    let counter = [0,0,0,0];
+    let counter = [0, 0, 0, 0];
     let step = 100;
     let increment = 0;
     const query = document.querySelectorAll('.numcounter'); 
@@ -81,14 +163,14 @@ function counterDontWorry(data) {
         }
     }
     setInterval(counterFunction, 20);
-  }
+}
 
 // services
 
-function renderServices (data) {
+function renderServices(data) {
     let HTML = '';
 
-    for (let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         HTML += `<div class="services">
                     <i class="${data[i].icon}"></i><br>
                     <h4>${data[i].title}</h4>
@@ -113,7 +195,6 @@ function renderBlogs (data) {
                             <div class="blogpic"><img src="./img/blog/${data[i].image}" alt="blog-pic"></div>
                         </div>
                             <img src="./img/${data[i].authorimage}" alt="user-pic" id="user">
-                            <p class="blogauthor">${data[i].authorname}</p>
                     <p class="under-blog">${data[i].date}<i class="lnr lnr-heart"></i>${data[i].likes}<i class="lnr lnr-bubble"></i>${data[i].comments}</p>
                     </div>
                         <h4 class="uppercase">${data[i].title}</h4>
@@ -170,15 +251,14 @@ function renderGallery(data) {
 }
 
 
-
 // testimonials
 
-function renderTestimonials ( data ) {
+function renderTestimonials(data) {
     let HTML = '';
 
-    for( let i=0; i<data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
 
-            HTML += `<div class="testimonials">
+        HTML += `<div class="testimonials">
                         <div class="face-icon">
                             <img src="./img/elements/${data[i].icon}" alt="User photo">
                         </div>
@@ -199,52 +279,53 @@ function renderTestimonials ( data ) {
     return document.querySelector(".carousel > .slider").innerHTML = HTML;
 }
 
+
 function testimonialControl () {
 
     const carousel = document.querySelector('.carousel');
     const slider = document.querySelector('.slider');
-    
+
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
     let direction;
 
-    next.addEventListener('click', function() {
-      direction = -1;
-      carousel.style.justifyContent = 'flex-start';
-      slider.style.transform = 'translate(-20%)';  
+    next.addEventListener('click', function () {
+        direction = -1;
+        carousel.style.justifyContent = 'flex-start';
+        slider.style.transform = 'translate(-20%)';
     });
-    
-    prev.addEventListener('click', function() {
-      if (direction === -1) {
-        direction = 1;
-        slider.appendChild(slider.firstElementChild);
-      }
-      carousel.style.justifyContent = 'flex-end';    
-      slider.style.transform = 'translate(20%)';  
-      
+
+    prev.addEventListener('click', function () {
+        if (direction === -1) {
+            direction = 1;
+            slider.appendChild(slider.firstElementChild);
+        }
+        carousel.style.justifyContent = 'flex-end';
+        slider.style.transform = 'translate(20%)';
+
     });
-    
-    slider.addEventListener('transitionend', function() {  
-      if (direction === 1) {
-        slider.prepend(slider.lastElementChild);
-      } else {
-        slider.appendChild(slider.firstElementChild);
-      }
-      
-      slider.style.transition = 'none';
-      slider.style.transform = 'translate(0)';
-      setTimeout(() => {
-        slider.style.transition = 'all 0.5s';
-      })
+
+    slider.addEventListener('transitionend', function () {
+        if (direction === 1) {
+            slider.prepend(slider.lastElementChild);
+        } else {
+            slider.appendChild(slider.firstElementChild);
+        }
+
+        slider.style.transition = 'none';
+        slider.style.transform = 'translate(0)';
+        setTimeout(() => {
+            slider.style.transition = 'all 0.5s';
+        })
     }, false);
 }
 
-function autoFeedback () {
+function autoFeedback() {
     const slider = document.querySelector('.slider');
     let sectionTestimonials = document.querySelector('.carousel');
 
     if (window.scrollY + window.innerHeight > sectionTestimonials.offsetTop) {
-    slider.style.transform = 'translate(-20%)';
+        slider.style.transform = 'translate(-20%)';
     }
     setTimeout(autoFeedback, 5000);
 }
@@ -279,7 +360,7 @@ function renderPlans(data) {
 
 // brands
 
-function renderBrands ( data ) {
+function renderBrands(data) {
     let HTML = '';
 
     for( let i=0; i<data.length; i++) {
@@ -289,14 +370,6 @@ function renderBrands ( data ) {
     }
 
     return document.querySelector(".brands").innerHTML = HTML;
-}
-
-function autoBrandsNew () {
-    const soloBrand = document.querySelector('.soloBrand');
-    const allBrands = document.querySelector('.brands');
-    let firstBrandClone = soloBrand.cloneNode(true);
-
-    allBrands.appendChild(firstBrandClone);
 }
 
 function autoBrandsNext() {
