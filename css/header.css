@@ -66,27 +66,30 @@
 .top-menu > .menu-item > ul.sub-menu {
     position: absolute;
     margin-top: 20px;
+    display: block;
     right: 0;
     visibility: hidden;
-    transition: visibility 0.2s;
+    transition: all 0.1s;
 }
 
 .top-menu > .menu-item:hover > ul.sub-menu {
     display: block;
     visibility: visible;
+    transition: all 0.2s;
 }
 
 .top-menu > .menu-item > ul.sub-menu > li > ul.sub-menu {
     position: absolute;
-    display: none;
+    display: block;
     right: 0;
     visibility: hidden;
-    transition: all 5s;
+    transition: all 0.2s;
 }
 
 .top-menu > .menu-item > ul.sub-menu > li:hover > ul.sub-menu {
     display: block;
     visibility: visible;
+    transition: all 0.2s;
 }
 
 
@@ -138,6 +141,7 @@
     .hamburger {
         display: inline-block;
         float: right;
+        cursor: pointer;
     }
 
     .cross {

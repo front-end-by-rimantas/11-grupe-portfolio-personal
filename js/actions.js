@@ -80,19 +80,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-document.addEventListener('click', (e) => {
-    // let item = e.target
-    // console.log(item.text)
-    // console.log(item.tagName)
-    // console.log(item.tagName)
-    // console.log(item.classList)
-    // let a = document.querySelector('.menu-item-active').classList.remove('menu-item-active')
-    // item.classList.add('menu-item-active')
-    // console.log(document.querySelector('.menu-item-active'))
-})
-
-
-
 
 const menuItemToggle = document.querySelectorAll('.menu-item > span')
 const child = document.querySelectorAll('.has-child > ul > .show')
@@ -142,10 +129,11 @@ renderBlogs(blogs);
 
 // projects
 
+const itemsPerPage = 6
 renderProjectFilters(categories)
-renderGallery(projects)
+renderGallery(projects, categories, itemsPerPage)
 let activeFilter = document.querySelector('.gallery .filters li.filter-active')
-var category = activeFilter.getAttribute('filter-data')
+let category = activeFilter.getAttribute('filter-data')
 const ul = document.querySelector('.filters')
 ul.addEventListener('click', (e) => {
     activeFilter = document.querySelector('.gallery .filters li.filter-active')
@@ -154,7 +142,7 @@ ul.addEventListener('click', (e) => {
     target.classList.add('filter-active')
     category = target.getAttribute('filter-data')
     let data = getGalleryData(projects, category)
-    renderGallery(data)
+    renderGallery(data, categories, itemsPerPage)
 })
 
 

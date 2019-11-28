@@ -9,7 +9,31 @@
     align-self: flex-end;
 }
 
+    /*.h-right > img {
+        max-width: 100%;
+    }*/
+
 .h-left > p {
     text-align: left;
     margin-bottom: 15px;
+}
+
+@media (max-width: 1040px) {
+    .h-right {
+        justify-content: center;
+    }
+    .h-right > img {
+        width: 55%;
+    }
+}
+
+@media (max-width: 840px) {
+    .h-right > img {
+        width: 80%;
+    }
+}
+@media (max-width: 640px) {
+    .h-right > img {
+        width: 75%;
+    }
 }

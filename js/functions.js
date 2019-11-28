@@ -229,9 +229,23 @@ function getGalleryData(data, category) {
     return galleryItems
 }
 
-function renderGallery(data) {
+function renderGallery(data, categories, itemsPerPage) {
+    console.log(data)
+    console.log(categories)
+    console.log(itemsPerPage)
     let HTML = ''
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < itemsPerPage; i++) {
+        if (data.length < itemsPerPage) {
+            itemsPerPage = data.length
+        }
+        let catName = ''
+        console.log(data[i].category_id)
+        for (let j = 0; j < categories.length; j++) {
+            if (data[i].category_id === categories[j].id) {
+                catName = categories[j].name
+            }
+        }
+
         HTML += `<div class="f-content">
                         <div class="thumb">
                             <div class="img-overlay"></div>
@@ -240,7 +254,7 @@ function renderGallery(data) {
                         </div>
                         <div class="cont-description">
                             <h4>${data[i].title}</h4>
-                            <p class="c-category">vector</p>
+                            <p class="c-category">${catName}</p>
                         </div>
                     </div>`
     }
@@ -249,8 +263,6 @@ function renderGallery(data) {
     return document.querySelector(".filters-content").innerHTML = HTML;
 
 }
-
-
 // testimonials
 
 function renderTestimonials(data) {
@@ -419,5 +431,3 @@ function brandsAnimation() {
 
     setTimeout(brandsAnimation, 2000);
 }
-
-// footer
