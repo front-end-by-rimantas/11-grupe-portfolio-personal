@@ -237,6 +237,54 @@ const projects = [
         image: 'p5.jpg',
         category_id: 3
     },
+    {
+        id: 7,
+        title: '40D Helmet Design',
+        image: 'p2.jpg',
+        category_id: 4
+    },
+    {
+        id: 7,
+        title: 'Creative Poster Design',
+        image: 'p1.jpg',
+        category_id: 1
+    },
+    {
+        id: 8,
+        title: '20D Vinyl Design',
+        image: 'p4.jpg',
+        category_id: 2
+    },
+    {
+        id: 9,
+        title: 'D Vinyl Design',
+        image: 'p5.jpg',
+        category_id: 4
+    },
+    {
+        id: 10,
+        title: ' Poster Design',
+        image: 'p3.jpg',
+        category_id: 3
+    },
+    {
+        id: 11,
+        title: '20D Vinyl Design',
+        image: 'p4.jpg',
+        category_id: 2
+    },
+    {
+        id: 12,
+        title: 'D Vinyl Design',
+        image: 'p5.jpg',
+        category_id: 2
+    },
+    {
+        id: 13,
+        title: ' Poster Design',
+        image: 'p3.jpg',
+        category_id: 2
+    },
 
 ]
 
