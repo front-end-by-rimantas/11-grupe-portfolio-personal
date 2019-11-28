@@ -400,6 +400,14 @@ function autoBrandsDelete() {
       })
 }
 
+function autoBrandsStart() {
+    brandsInterval = setInterval(brandsAnimation, 2000);
+}
+
+function autoBrandsStop () {
+    clearInterval(brandsInterval);
+}
+
 function brandsAnimation() {
     const soloBrand = document.querySelector('.soloBrand');
     const allBrands = document.querySelector('.brands');
@@ -412,12 +420,20 @@ function brandsAnimation() {
     autoBrandsNext();
 
     // Istrinam pirma vaika, kuris nuejo i sona ir pakeiciam antra vaika pirmu, kai pasislinkimas baigtas
-
     allBrands.addEventListener('transitionend', autoBrandsDelete);
 
     // Kartojam funkcija per nauja
+    window.addEventListener('focus', autoBrandsStart);
 
-    setTimeout(brandsAnimation, 2000);
+    window.addEventListener('blur', autoBrandsStop);
+
+    allBrands.addEventListener('mousedown', () => {
+        autoBrandsStop();
+        // Draginimo logika
+        
+    });
+
+    allBrands.addEventListener('mouseup', autoBrandsStart);
 }
 
 // footer
