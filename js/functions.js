@@ -1,6 +1,70 @@
 "use strict";
 
 // header
+function hamburgerIconChange() {
+    const hamburger = document.querySelector('.hamburger')
+    const child = hamburger.childNodes[0]
+    child.classList.toggle('lnr-menu')
+    child.classList.toggle('lnr-cross')
+}
+
+function addActiveClass(allMenuItems, itemText) {
+    allMenuItems.forEach((i) => {
+        if (i.textContent === itemText) {
+            i.classList.add('menu-item-active')
+        }
+    })
+}
+
+function renderMainMenu(mobileMenuItems, menuType) {
+    mobileMenuItems.forEach((i) => {
+        i.addEventListener('click', (e) => {
+            let activeElements = document.querySelectorAll('.menu-item-active')
+            activeElements.forEach((el) => {
+                el.classList.remove('menu-item-active')
+            })
+            scroll = true
+            if (menuType === 'desktop') {
+                mContainer.style.display = 'none'
+            }
+
+            if (menuType === 'mobile') {
+                mContainer.style.display = mContainer.style.display === 'grid' ? 'none' : 'grid'
+                hamburgerIconChange()
+                activeElements.forEach((el) => {
+                    el.classList.remove('menu-item-active')
+                })
+            }
+
+            let item = e.target
+            let itemText = item.textContent
+
+            addActiveClass(allMenuItems, itemText)
+        })
+    })
+
+}
+
+function mobileMenuToggling() {
+    const menuItemToggle = document.querySelectorAll('.menu-item > span')
+    const child = document.querySelectorAll('.has-child > ul > .show')
+    child.forEach((e) => {
+        e.classList.remove('show')
+    })
+
+    menuItemToggle.forEach((i) => {
+        i.addEventListener('click', (e) => {
+            i.classList.toggle('fa-angle-down')
+            i.classList.toggle('fa-angle-up')
+            let children = i.nextElementSibling.childNodes
+
+            children.forEach((e) => {
+                e.classList.toggle('show')
+            })
+        })
+    })
+}
+
 function renderSubLevelMenu(data) {
     if (!Array.isArray(data)) {
         console.error('ERROR: Data Type must by array')
@@ -230,16 +294,12 @@ function getGalleryData(data, category) {
 }
 
 function renderGallery(data, categories, itemsPerPage) {
-    console.log(data)
-    console.log(categories)
-    console.log(itemsPerPage)
     let HTML = ''
     for (let i = 0; i < itemsPerPage; i++) {
         if (data.length < itemsPerPage) {
             itemsPerPage = data.length
         }
         let catName = ''
-        console.log(data[i].category_id)
         for (let j = 0; j < categories.length; j++) {
             if (data[i].category_id === categories[j].id) {
                 catName = categories[j].name
