@@ -437,7 +437,7 @@ function renderBrands(data) {
 
     for( let i=0; i<data.length; i++) {
         HTML += `<div class="soloBrand">
-                    <a href="#"><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>
+                    <a href=""><img src="./img/brands/${data[i].source}" alt="${data[i].name}"></a>
                 </div>`;
     }
 

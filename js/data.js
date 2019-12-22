@@ -293,37 +293,42 @@ const projects = [
 
 const testimonials = [
     {
-        id: 'feed1',
+        id: '1',
         icon: 'user1.png',
-        text: 'Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.',
+        text: 'Do 1 you want to be even more successful? Learn to love learning and growth. The more effort you put' +
+            ' into improving your skills, the bigger the payoff you.',
         name: 'Harriet Maxwell',
         jobtitle: 'CEO at Google'
     },
     {
-        id: 'feed2',
+        id: '2',
         icon: 'user2.png',
-        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        text: 'A 2 purpose is the eternal condition for success. Every former smoker can tell you just how hard it is' +
+            ' to stop smoking cigarettes. However.',
         name: 'Carolyn Craig',
         jobtitle: 'CEO at Facebook'
     },
     {
-        id: 'feed3',
+        id: '3',
         icon: 'user2.png',
-        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        text: 'A 3 purpose is the eternal condition for success. Every former smoker can tell you just how hard it is' +
+            ' to stop smoking cigarettes. However.',
         name: 'Petras Jonaitis',
         jobtitle: 'Ukvedys at BIT'
     },
     {
-        id: 'feed3',
+        id: '4',
         icon: 'user2.png',
-        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        text: 'A 4 purpose is the eternal condition for success. Every former smoker can tell you just how hard it is' +
+            ' to stop smoking cigarettes. However.',
         name: 'Jonas Petraitis',
         jobtitle: 'Gatviu slavejas at Vilniaus savivaldybe'
     },
     {
-        id: 'feed3',
+        id: '5',
         icon: 'user2.png',
-        text: 'A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.',
+        text: 'A 5 purpose is the eternal condition for success. Every former smoker can tell you just how hard it is' +
+            ' to stop smoking cigarettes. However.',
         name: 'Giedrius Giedraitis',
         jobtitle: 'Statybininkas'
     },
